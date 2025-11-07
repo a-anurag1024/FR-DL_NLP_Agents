@@ -1,0 +1,1797 @@
+[
+    {
+        "question": "What is the main goal of advanced optimization techniques in deep learning?",
+        "answer_key": "To speed up convergence and improve training stability.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What issue does standard gradient descent often face?",
+        "answer_key": "Slow convergence and oscillations in steep directions.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the intuition behind momentum optimization?",
+        "answer_key": "It accumulates past gradients to build velocity in consistent directions.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the velocity term in momentum?",
+        "answer_key": "An exponentially decaying average of past gradients.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the update equation for Momentum Optimizer?",
+        "answer_key": "v_t = βv_{t-1} + (1-β)∇J; W := W - αv_t",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What does β represent in momentum?",
+        "answer_key": "Momentum coefficient controlling past gradient influence.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Typical value of β used in momentum?",
+        "answer_key": "0.9",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "How does momentum help gradient descent?",
+        "answer_key": "It smooths oscillations and accelerates convergence in long valleys.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is Nesterov Accelerated Gradient (NAG)?",
+        "answer_key": "A momentum variant that looks ahead before computing the gradient.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why is NAG often faster than classical momentum?",
+        "answer_key": "It anticipates future position and corrects overshooting earlier.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What problem does RMSProp aim to solve?",
+        "answer_key": "Adapting learning rates for parameters with different gradient magnitudes.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the key concept of RMSProp?",
+        "answer_key": "It scales learning rates inversely to the moving average of squared gradients.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the update rule for RMSProp?",
+        "answer_key": "s_t = βs_{t-1} + (1-β)∇J²; W := W - α∇J / (√s_t + ε)",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why is RMSProp suitable for non-stationary problems like RNNs?",
+        "answer_key": "It adapts quickly to changing gradient patterns.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What does ε represent in RMSProp and Adam?",
+        "answer_key": "A small constant to prevent division by zero.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is Adam short for?",
+        "answer_key": "Adaptive Moment Estimation.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Which two concepts does Adam combine?",
+        "answer_key": "Momentum and RMSProp (first and second moment estimates).",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What are the two moment estimates in Adam?",
+        "answer_key": "First moment (mean of gradients) and second moment (mean of squared gradients).",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the first moment estimate in Adam’s formula?",
+        "answer_key": "m_t = β₁m_{t-1} + (1-β₁)∇J",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the second moment estimate in Adam’s formula?",
+        "answer_key": "v_t = β₂v_{t-1} + (1-β₂)∇J²",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why are bias correction terms used in Adam?",
+        "answer_key": "To counteract initialization bias in early steps.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What are typical values for β₁ and β₂ in Adam?",
+        "answer_key": "β₁ = 0.9, β₂ = 0.999",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the final update rule for Adam?",
+        "answer_key": "W := W - α * (m̂_t / (√v̂_t + ε))",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why is Adam widely used in deep learning?",
+        "answer_key": "It converges fast and is robust to noisy gradients.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What does adaptive learning rate mean?",
+        "answer_key": "Each parameter has its own automatically adjusted step size.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why is adaptive learning rate beneficial?",
+        "answer_key": "It handles parameters with varying gradient scales efficiently.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the main limitation of Adam compared to SGD with momentum?",
+        "answer_key": "It can converge to sharp minima, leading to weaker generalization.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is AMSGrad and how does it modify Adam?",
+        "answer_key": "A variant ensuring non-increasing learning rates using max(v_t).",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What problem does AMSGrad address?",
+        "answer_key": "Adam’s potential failure to converge in some cases.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the advantage of using momentum in optimization?",
+        "answer_key": "Reduces oscillation and speeds up movement along consistent directions.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "How does RMSProp differ from AdaGrad?",
+        "answer_key": "RMSProp uses exponential decay instead of cumulative sum of squared gradients.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why does AdaGrad slow down too early?",
+        "answer_key": "Accumulated squared gradients keep increasing, reducing learning rates excessively.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "How does RMSProp fix AdaGrad’s limitation?",
+        "answer_key": "By keeping a moving average of squared gradients instead of summing.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the purpose of gradient normalization in Adam-like optimizers?",
+        "answer_key": "To ensure consistent update scales across parameters.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why is Adam considered more computationally efficient?",
+        "answer_key": "It requires minimal memory and per-parameter scaling only.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "When might SGD outperform Adam?",
+        "answer_key": "When generalization is more important than convergence speed.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What does momentum help counteract in SGD?",
+        "answer_key": "High curvature and noisy gradient directions.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why is β₂ close to 1 in Adam?",
+        "answer_key": "To maintain a long-term memory of squared gradients.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why does RMSProp use the square root of s_t in its update rule?",
+        "answer_key": "To scale updates proportionally to gradient magnitude.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What does the term ‘first moment’ refer to in Adam?",
+        "answer_key": "The mean of gradients (directional memory).",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What does the term ‘second moment’ refer to in Adam?",
+        "answer_key": "The variance of gradients (magnitude control).",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What hyperparameter in Adam controls adaptation speed?",
+        "answer_key": "Learning rate α.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the general benefit of using adaptive optimizers?",
+        "answer_key": "They automatically tune learning rates for each parameter.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the effect of too small a learning rate with Adam?",
+        "answer_key": "Extremely slow convergence.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the effect of too large a learning rate with Adam?",
+        "answer_key": "Divergence or oscillatory training.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Why is combining momentum and adaptivity powerful?",
+        "answer_key": "It balances fast convergence with stable step adjustments.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "Which optimizer is typically the default in most frameworks?",
+        "answer_key": "Adam.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What does gradient scaling achieve in RMSProp and Adam?",
+        "answer_key": "Stabilizes updates across varying gradient magnitudes.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the main drawback of adaptive optimizers like Adam?",
+        "answer_key": "They may generalize worse than SGD with momentum.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What variant of Adam aims to improve generalization?",
+        "answer_key": "AdamW (decoupled weight decay).",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What is the key improvement in AdamW over Adam?",
+        "answer_key": "It decouples L2 regularization from adaptive learning rate.",
+        "category": "Advanced Optimizations"
+    },
+    {
+        "question": "What defines a deep neural network (DNN)?",
+        "answer_key": "A neural network with multiple hidden layers between input and output.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "Why are deep networks more powerful than shallow ones?",
+        "answer_key": "They capture hierarchical and abstract representations of data.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the main drawback of very deep architectures?",
+        "answer_key": "They are prone to vanishing/exploding gradients and overfitting.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the role of non-linear activations in deep networks?",
+        "answer_key": "They allow learning complex, non-linear mappings.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "How does increasing depth affect model capacity?",
+        "answer_key": "It increases representational power but also risk of overfitting.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is a fully connected (dense) layer?",
+        "answer_key": "A layer where every neuron connects to every neuron in the next layer.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the function of convolutional layers in deep architectures?",
+        "answer_key": "They extract spatial hierarchies by sharing weights across local regions.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What does residual connection (skip connection) help prevent?",
+        "answer_key": "Vanishing gradients in very deep networks.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is a multiclass classification problem?",
+        "answer_key": "A task with more than two mutually exclusive output classes.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What activation function is used in the output layer for multiclass tasks?",
+        "answer_key": "Softmax activation.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What loss function is commonly used for multiclass classification?",
+        "answer_key": "Categorical cross-entropy loss.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "How is a multiclass label typically represented?",
+        "answer_key": "As a one-hot encoded vector.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the formula for softmax output?",
+        "answer_key": "ŷ_i = e^{z_i} / Σ e^{z_j} across all classes.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "How is the predicted class chosen in multiclass classification?",
+        "answer_key": "By taking the argmax of softmax probabilities.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is transfer learning?",
+        "answer_key": "Reusing a pre-trained model’s learned features for a new but related task.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "Why is transfer learning useful?",
+        "answer_key": "It speeds up training and improves performance with limited data.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What are the two main strategies in transfer learning?",
+        "answer_key": "Feature extraction and fine-tuning.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "When should feature extraction be preferred over fine-tuning?",
+        "answer_key": "When the new dataset is small or very different from the source.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "When is fine-tuning more beneficial?",
+        "answer_key": "When the new dataset is large and similar to the pretraining dataset.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the main advantage of transfer learning in deep networks?",
+        "answer_key": "It reduces data and compute requirements by leveraging pre-trained features.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is multi-task learning (MTL)?",
+        "answer_key": "Training one model to perform multiple related tasks simultaneously.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is shared among tasks in multi-task learning?",
+        "answer_key": "Lower-level feature representations.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the main objective of MTL?",
+        "answer_key": "To improve generalization by leveraging task-related information.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is negative transfer in multi-task learning?",
+        "answer_key": "When one task harms performance on another due to conflicting gradients.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the typical loss formulation in multi-task learning?",
+        "answer_key": "Weighted sum of task-specific losses.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "Why does MTL act as a regularizer?",
+        "answer_key": "It prevents overfitting by forcing the network to share representations.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is task weighting in multi-task learning?",
+        "answer_key": "Adjusting loss importance for different tasks.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What are the two main types of MTL architectures?",
+        "answer_key": "Hard parameter sharing and soft parameter sharing.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is hard parameter sharing in MTL?",
+        "answer_key": "Shared backbone layers with task-specific output heads.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is soft parameter sharing in MTL?",
+        "answer_key": "Each task has its own model but parameters are regularized to be similar.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the concept of orthogonality of controls?",
+        "answer_key": "Designing training mechanisms so they influence learning independently.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "Why is orthogonality of controls important?",
+        "answer_key": "It ensures stability and prevents unwanted interference between training factors.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is an example of orthogonal training controls?",
+        "answer_key": "Batch normalization (stabilization) and weight decay (regularization).",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "How does orthogonality simplify hyperparameter tuning?",
+        "answer_key": "Each control can be adjusted independently without side effects.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What can cause non-orthogonality in deep learning controls?",
+        "answer_key": "Overlapping effects between optimizers, normalization, and regularization.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the goal of orthogonal optimization design?",
+        "answer_key": "To make different training components decoupled and predictable.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is an example of transfer learning in NLP?",
+        "answer_key": "Fine-tuning BERT on a text classification dataset.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is an example of transfer learning in computer vision?",
+        "answer_key": "Using a pretrained ResNet for image feature extraction.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "Why are pre-trained models on ImageNet commonly used?",
+        "answer_key": "They learn general visual features transferable to many tasks.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is a shared encoder-decoder setup in MTL?",
+        "answer_key": "Shared encoder processes input; task-specific decoders produce different outputs.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the main advantage of parameter sharing?",
+        "answer_key": "Reduced redundancy and better generalization.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What type of layer is typically shared in MTL?",
+        "answer_key": "Convolutional or dense feature extraction layers.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "How do multi-head architectures benefit multi-task learning?",
+        "answer_key": "Each head learns specialized output while sharing core representations.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the main challenge in multi-task optimization?",
+        "answer_key": "Balancing gradients so tasks don’t dominate or conflict.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What method can balance conflicting gradients in MTL?",
+        "answer_key": "Gradient normalization or task-specific learning rates.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "How can transfer learning help with small datasets?",
+        "answer_key": "By leveraging pre-trained features to reduce overfitting.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is model fine-tuning?",
+        "answer_key": "Gradually updating pre-trained weights for a new task.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the difference between pre-training and fine-tuning?",
+        "answer_key": "Pre-training learns general features; fine-tuning adapts to specific tasks.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "How does freezing layers help in transfer learning?",
+        "answer_key": "It retains previously learned features while training only new layers.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "When is full fine-tuning recommended?",
+        "answer_key": "When the new dataset is large and similar to the source domain.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "Why is modularity important in deep architectures?",
+        "answer_key": "It allows reusability and flexibility across multiple learning paradigms.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What principle underlies orthogonal control design?",
+        "answer_key": "Independent influence of each hyperparameter on learning outcomes.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the benefit of orthogonal optimizers and normalization methods?",
+        "answer_key": "They stabilize training and simplify parameter tuning.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "How does multitask learning enhance generalization?",
+        "answer_key": "By forcing shared representations across related objectives.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What type of data setup is ideal for multi-task learning?",
+        "answer_key": "Tasks that share input features or underlying structure.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What does the 'decoupling principle' in training refer to?",
+        "answer_key": "Separating training effects to achieve predictable, stable optimization.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is a key difference between multi-label and multiclass classification?",
+        "answer_key": "Multi-label allows multiple true classes per input; multiclass allows only one.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What activation is used for multi-label classification?",
+        "answer_key": "Sigmoid per output neuron.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What activation is used for multiclass classification?",
+        "answer_key": "Softmax across all classes.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "Why are orthogonal design principles critical in large-scale training?",
+        "answer_key": "They make optimization stable despite complex component interactions.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the main benefit of combining transfer and multitask learning?",
+        "answer_key": "They jointly improve efficiency and generalization.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "How does multitask learning relate to transfer learning?",
+        "answer_key": "MTL performs transfer jointly during training instead of post hoc.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the common loss function combination approach in MTL?",
+        "answer_key": "Weighted sum of individual task losses.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What problem can arise from poor weighting in multitask learning?",
+        "answer_key": "Dominant tasks overshadow smaller ones during optimization.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What ensures orthogonal interactions among network components?",
+        "answer_key": "Proper initialization, normalization, and decoupled hyperparameters.",
+        "category": "Model Architecture Paradigms"
+    },
+    {
+        "question": "What is the key idea behind viewing logistic regression as a neural network?",
+        "answer_key": "It’s a single-layer neural network with sigmoid activation and no hidden layer.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What function maps linear outputs to probabilities in logistic regression?",
+        "answer_key": "Sigmoid activation function.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the equation for the linear transformation in a neuron?",
+        "answer_key": "z = W^T x + b",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the purpose of the bias term in neural networks?",
+        "answer_key": "It allows shifting the activation function for better fitting.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the difference between loss function and cost function?",
+        "answer_key": "Loss is per sample error; cost is average over all samples.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What does forward propagation compute?",
+        "answer_key": "It computes outputs (predictions) layer by layer.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is backward propagation used for?",
+        "answer_key": "It computes gradients of loss w.r.t parameters.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "Which rule underlies the computation of gradients in backpropagation?",
+        "answer_key": "The chain rule of calculus.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "Why is vectorization important in neural network computation?",
+        "answer_key": "It speeds up computation by using matrix operations instead of loops.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the mathematical operation in forward propagation for layer l?",
+        "answer_key": "z[l] = W[l] a[l-1] + b[l]; a[l] = g(z[l])",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What happens if all weights are initialized to zero?",
+        "answer_key": "All neurons learn the same thing (symmetry not broken).",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "Why do we use activation functions?",
+        "answer_key": "To introduce non-linearity and model complex relationships.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What problem arises if we use no activation function?",
+        "answer_key": "The network becomes a linear model regardless of depth.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What are common activation functions in neural networks?",
+        "answer_key": "Sigmoid, tanh, ReLU, Leaky ReLU.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "Why is ReLU preferred over sigmoid in deep networks?",
+        "answer_key": "It avoids vanishing gradients and speeds up learning.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What does 'a[l]' represent in neural network notation?",
+        "answer_key": "Activation (output) of layer l.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What does 'z[l]' represent in neural network notation?",
+        "answer_key": "Linear transformation (weighted input) at layer l.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the purpose of the learning rate in gradient descent?",
+        "answer_key": "It controls the step size for weight updates.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What are the key parameters learned during training?",
+        "answer_key": "Weights and biases.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What happens during each iteration of training?",
+        "answer_key": "Forward pass → compute loss → backward pass → update weights.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "How is the gradient with respect to weight W[l] computed?",
+        "answer_key": "By chaining partial derivatives from output to layer l.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the cost function used in binary classification?",
+        "answer_key": "Binary cross-entropy or log loss.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "Why is vectorized implementation preferred in deep learning frameworks?",
+        "answer_key": "It exploits hardware acceleration and parallel computation.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the role of the sigmoid function in logistic regression?",
+        "answer_key": "To squash outputs to [0,1] for probability interpretation.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the derivative of the sigmoid function useful for backpropagation?",
+        "answer_key": "σ'(z) = σ(z)(1 - σ(z))",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the purpose of using biases in each neuron?",
+        "answer_key": "To provide additional flexibility to the decision boundary.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "How is the output layer activation chosen based on the task?",
+        "answer_key": "Sigmoid for binary, softmax for multiclass, none for regression.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the difference between activation and pre-activation?",
+        "answer_key": "Pre-activation is z (linear); activation is g(z) (after non-linearity).",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What causes saturation in sigmoid/tanh activations?",
+        "answer_key": "Large |z| values make gradients near zero → vanishing gradient.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "How can vanishing gradients be mitigated in activation design?",
+        "answer_key": "Use ReLU or its variants.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the intuition behind weight updates in backpropagation?",
+        "answer_key": "Adjust weights in the direction that reduces the loss.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What determines the complexity of a neural network?",
+        "answer_key": "Number of layers and neurons per layer.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "Why do deep networks outperform shallow ones?",
+        "answer_key": "They capture hierarchical feature representations.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What’s the relationship between linear regression and neural networks?",
+        "answer_key": "Linear regression is a neural network without activation function.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "Why is matrix notation preferred in NN computation?",
+        "answer_key": "It simplifies operations and matches hardware optimization.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What does the term 'propagation' signify in neural networks?",
+        "answer_key": "Flow of signals (forward) and errors (backward) through layers.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the importance of the derivative of activation in backpropagation?",
+        "answer_key": "It determines how much error is passed backward.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "Why do we need different activation functions in different layers?",
+        "answer_key": "To adapt to data scale and avoid gradient instability.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "How are matrix dimensions managed in neural networks?",
+        "answer_key": "Ensure weight, activation, and bias dimensions align per layer.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the significance of using mini-batches in vectorized form?",
+        "answer_key": "Parallel computation over samples improves efficiency and gradient estimates.",
+        "category": "Neural Network Fundamentals"
+    },
+    {
+        "question": "What is the primary goal of regularization in neural networks?",
+        "answer_key": "To prevent overfitting by constraining model complexity.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What does overfitting mean in model training?",
+        "answer_key": "When a model learns training data too well but performs poorly on unseen data.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the bias-variance trade-off?",
+        "answer_key": "Balancing underfitting (high bias) and overfitting (high variance).",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How does high bias affect model performance?",
+        "answer_key": "It leads to underfitting and poor training accuracy.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How does high variance affect model performance?",
+        "answer_key": "It leads to overfitting and poor generalization.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is L1 regularization also known as?",
+        "answer_key": "Lasso regularization.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is L2 regularization also known as?",
+        "answer_key": "Ridge regularization or weight decay.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the mathematical form of L1 regularization?",
+        "answer_key": "λ * Σ|w_i|",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the mathematical form of L2 regularization?",
+        "answer_key": "λ * Σw_i²",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How does L1 regularization affect weights?",
+        "answer_key": "It drives some weights exactly to zero, promoting sparsity.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How does L2 regularization affect weights?",
+        "answer_key": "It shrinks weights smoothly but keeps all nonzero.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the Frobenius norm used for?",
+        "answer_key": "To regularize weight matrices using their squared magnitude.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How does weight decay relate to L2 regularization?",
+        "answer_key": "It’s the implementation of L2 penalty in weight updates.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the effect of increasing the regularization parameter λ?",
+        "answer_key": "It increases penalty strength and simplifies the model.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What happens if λ is too high in regularization?",
+        "answer_key": "Model underfits due to excessive weight suppression.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What happens if λ is too low in regularization?",
+        "answer_key": "Model may overfit due to lack of constraint.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is dropout regularization?",
+        "answer_key": "Randomly dropping neurons during training to prevent co-adaptation.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How does dropout improve generalization?",
+        "answer_key": "By making neurons learn independently, improving robustness.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What happens during inference when using dropout?",
+        "answer_key": "All neurons are used, with activations scaled by dropout rate.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is a typical dropout rate used in practice?",
+        "answer_key": "Between 0.2 and 0.5 depending on layer and dataset.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "Why is dropout often unnecessary when using batch normalization?",
+        "answer_key": "Batch norm already provides some regularization effect.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is early stopping?",
+        "answer_key": "Halting training when validation loss starts to increase.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "Why is early stopping effective?",
+        "answer_key": "It prevents overfitting by stopping before model memorizes noise.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What data is used to decide early stopping?",
+        "answer_key": "Validation loss or accuracy.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How can early stopping be viewed as a form of regularization?",
+        "answer_key": "It limits the model’s capacity by restricting training time.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What does the regularization term add to the cost function?",
+        "answer_key": "A penalty proportional to the weight magnitudes.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the impact of regularization on gradients?",
+        "answer_key": "It adds a term that pushes weights toward smaller values.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What does the combined cost function with L2 regularization look like?",
+        "answer_key": "J_reg = J + (λ/2m) * Σw_i²",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "Why is regularization especially important in deep networks?",
+        "answer_key": "Because they have many parameters prone to overfitting.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "Which type of regularization encourages sparse models?",
+        "answer_key": "L1 regularization.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "Which regularization smooths weights without making them zero?",
+        "answer_key": "L2 regularization.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the difference between L1 and L2 in terms of optimization?",
+        "answer_key": "L1 uses absolute values (non-differentiable at zero); L2 is smooth.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the effect of combining L1 and L2 regularization?",
+        "answer_key": "Elastic Net regularization — balances sparsity and smoothness.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What does the term 'generalization' mean in machine learning?",
+        "answer_key": "The model’s ability to perform well on unseen data.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the purpose of a validation set in training?",
+        "answer_key": "To monitor generalization performance and detect overfitting.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "Why does regularization improve generalization?",
+        "answer_key": "It discourages fitting noise and focuses on essential patterns.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How does dropout act as implicit ensemble learning?",
+        "answer_key": "It averages predictions from many sub-networks trained jointly.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What kind of models benefit most from dropout?",
+        "answer_key": "Deep dense networks with large parameter counts.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "When should early stopping not be used?",
+        "answer_key": "When validation loss fluctuates heavily without trend.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What does the bias-variance curve illustrate?",
+        "answer_key": "The trade-off between model complexity and generalization error.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What does regularization directly modify in gradient updates?",
+        "answer_key": "The weight update rule includes a decay or shrinkage term.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How does weight decay help control exploding weights?",
+        "answer_key": "By continuously scaling them toward smaller magnitudes.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the geometric interpretation of L2 regularization?",
+        "answer_key": "Constrains weights within a hypersphere.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the geometric interpretation of L1 regularization?",
+        "answer_key": "Constrains weights within a diamond (Manhattan norm).",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How does the Frobenius norm apply in matrix regularization?",
+        "answer_key": "It penalizes large matrix entries uniformly like L2.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "Why is the regularization parameter λ critical?",
+        "answer_key": "It determines the strength of the penalty and bias-variance balance.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "How can one tune the value of λ?",
+        "answer_key": "Through cross-validation on a validation set.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "Why might dropout hurt performance if overused?",
+        "answer_key": "Excessive dropout removes too much information during training.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "Which regularization method is most common in CNNs?",
+        "answer_key": "Weight decay (L2 regularization).",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What combination of techniques usually improves generalization most?",
+        "answer_key": "Dropout + Weight Decay + Early Stopping.",
+        "category": "Regularization And Generalization"
+    },
+    {
+        "question": "What is the main goal of the training process in neural networks?",
+        "answer_key": "To minimize the cost function by adjusting weights and biases.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the difference between a loss function and a cost function?",
+        "answer_key": "Loss is per sample error; cost is the average loss over the dataset.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the purpose of a loss function?",
+        "answer_key": "To quantify the difference between predicted and actual outputs.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the most common loss function used for regression?",
+        "answer_key": "Mean Squared Error (MSE).",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the standard loss function for binary classification?",
+        "answer_key": "Binary Cross-Entropy (Log Loss).",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What does the categorical cross-entropy loss measure?",
+        "answer_key": "The divergence between true and predicted probability distributions.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why do we take the average of losses in a cost function?",
+        "answer_key": "To stabilize gradient updates and make optimization scale-independent.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the basic principle behind gradient descent?",
+        "answer_key": "Iteratively move parameters opposite to the gradient to minimize cost.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the mathematical update rule for gradient descent?",
+        "answer_key": "θ := θ - α ∂J/∂θ",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What role does the learning rate (α) play in gradient descent?",
+        "answer_key": "It controls the step size of each parameter update.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What happens if the learning rate is too high?",
+        "answer_key": "The optimization overshoots and may diverge.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What happens if the learning rate is too low?",
+        "answer_key": "The training converges very slowly or gets stuck in local minima.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why does gradient descent sometimes oscillate or fail to converge?",
+        "answer_key": "Due to improper learning rate or highly curved cost surfaces.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is Batch Gradient Descent?",
+        "answer_key": "Uses the entire training dataset to compute one update per iteration.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is Stochastic Gradient Descent (SGD)?",
+        "answer_key": "Updates parameters using one training example at a time.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is Mini-Batch Gradient Descent?",
+        "answer_key": "Updates parameters using a small random subset of the data each iteration.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why is Mini-Batch Gradient Descent commonly used?",
+        "answer_key": "It balances stability and computational efficiency.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What determines the direction of parameter updates in gradient descent?",
+        "answer_key": "The negative of the gradient of the cost function.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the purpose of computing gradients during training?",
+        "answer_key": "To find how each parameter influences the loss and adjust accordingly.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why does gradient descent require differentiable cost functions?",
+        "answer_key": "To calculate gradients analytically for weight updates.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the role of backpropagation in gradient descent?",
+        "answer_key": "It efficiently computes gradients across layers using the chain rule.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the intuition behind minimizing the cost function?",
+        "answer_key": "Finding parameters that yield predictions closest to true outputs.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why do neural networks often use convex-like loss functions?",
+        "answer_key": "To simplify optimization and reduce risk of local minima.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the 'epoch' in training terminology?",
+        "answer_key": "One complete pass through the entire training dataset.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is a 'batch size' in neural network training?",
+        "answer_key": "The number of samples used for one gradient update.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why is shuffling the data between epochs important?",
+        "answer_key": "To prevent bias and ensure independent gradient estimates.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "How does stochasticity in SGD help optimization?",
+        "answer_key": "Randomness helps escape shallow local minima.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why might Batch Gradient Descent be computationally expensive?",
+        "answer_key": "It requires processing all samples for each update.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is convergence in the context of gradient descent?",
+        "answer_key": "When cost function changes become negligibly small between iterations.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the geometric intuition of gradient descent?",
+        "answer_key": "It moves parameters in the steepest downward direction of the cost surface.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What type of surface does gradient descent operate on?",
+        "answer_key": "The multidimensional loss or cost surface.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "How can one check if the model is overfitting during training?",
+        "answer_key": "Training loss decreases while validation loss increases.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What causes vanishing or exploding gradients during optimization?",
+        "answer_key": "Improper initialization or deep architectures with unstable activations.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is a typical sign that learning rate needs adjustment?",
+        "answer_key": "Loss oscillates or diverges instead of decreasing smoothly.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the purpose of gradient clipping?",
+        "answer_key": "To prevent exploding gradients by capping their magnitude.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "How does normalization affect gradient descent training?",
+        "answer_key": "Normalized inputs stabilize gradient magnitudes and speed convergence.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the effect of noise in Stochastic Gradient Descent?",
+        "answer_key": "It makes convergence noisier but may help find flatter minima.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why do we prefer differentiable activations in optimization?",
+        "answer_key": "Because gradient-based methods require differentiability.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the significance of the cost function being convex?",
+        "answer_key": "It guarantees a single global minimum for optimization.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why are non-convex cost functions challenging for neural networks?",
+        "answer_key": "They can have many local minima or saddle points.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What role does the number of epochs play in training?",
+        "answer_key": "It controls how long the model learns; too many can overfit.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "How does early stopping relate to optimization?",
+        "answer_key": "It halts training before overfitting begins.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What determines the rate at which the loss decreases?",
+        "answer_key": "Learning rate and curvature of the cost surface.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "Why does gradient descent sometimes get stuck in saddle points?",
+        "answer_key": "Gradients become very small, halting progress even if not at a minimum.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the benefit of using vectorized operations in optimization?",
+        "answer_key": "They accelerate gradient computations through parallelism.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the general update pattern in any gradient-based optimization?",
+        "answer_key": "Forward pass → compute loss → backpropagate → update parameters.",
+        "category": "Training And Optimization"
+    },
+    {
+        "question": "What is the main goal of batch normalization?",
+        "answer_key": "To stabilize and accelerate training by normalizing layer activations.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What problem does batch normalization help mitigate?",
+        "answer_key": "Internal covariate shift.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is internal covariate shift?",
+        "answer_key": "Changes in the distribution of layer inputs during training.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What are the main steps in batch normalization?",
+        "answer_key": "Compute mean and variance, normalize, then scale and shift.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What are the learnable parameters in batch normalization?",
+        "answer_key": "Gamma (scale) and beta (shift).",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "How does batch normalization affect gradient flow?",
+        "answer_key": "It smooths and stabilizes gradients across layers.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the mathematical formula for batch normalization?",
+        "answer_key": "y = γ * (x - μ_B) / √(σ_B² + ε) + β",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Why does batch normalization enable higher learning rates?",
+        "answer_key": "It prevents exploding or vanishing activations during training.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "How does batch normalization act as a regularizer?",
+        "answer_key": "It adds noise via mini-batch statistics, reducing overfitting.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What happens during inference with batch normalization?",
+        "answer_key": "Uses running averages of mean and variance instead of batch values.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is covariate shift in machine learning?",
+        "answer_key": "Change in input distribution between training and test data.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "How does covariate shift differ from concept drift?",
+        "answer_key": "Covariate shift changes P(X); concept drift changes P(Y|X).",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the effect of covariate shift on model generalization?",
+        "answer_key": "It can degrade test performance due to mismatched input statistics.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "How can covariate shift be mitigated?",
+        "answer_key": "By reweighting samples or applying domain adaptation.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "How does batch normalization indirectly reduce covariate shift?",
+        "answer_key": "By keeping internal feature distributions consistent across updates.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is hyperparameter tuning?",
+        "answer_key": "The process of finding optimal hyperparameter values for a model.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Give examples of hyperparameters in neural networks.",
+        "answer_key": "Learning rate, batch size, number of layers, regularization strength.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Why is hyperparameter tuning important?",
+        "answer_key": "Because performance heavily depends on configuration choices.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is grid search in hyperparameter tuning?",
+        "answer_key": "Systematic evaluation of all combinations from a parameter grid.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is random search in hyperparameter tuning?",
+        "answer_key": "Randomly samples hyperparameter combinations for evaluation.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Why is random search often more efficient than grid search?",
+        "answer_key": "It explores more diverse configurations in fewer trials.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is Bayesian optimization used for in tuning?",
+        "answer_key": "It models performance as a probabilistic function to guide exploration.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the main advantage of Bayesian optimization?",
+        "answer_key": "It intelligently balances exploration and exploitation.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is Hyperband or successive halving?",
+        "answer_key": "A method that allocates resources dynamically to the best-performing trials.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What validation strategy is commonly used in tuning?",
+        "answer_key": "Cross-validation or hold-out validation.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Which hyperparameter generally has the most influence on convergence?",
+        "answer_key": "Learning rate.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the purpose of learning rate scheduling?",
+        "answer_key": "To adjust learning rate during training for faster and smoother convergence.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What are common learning rate scheduling strategies?",
+        "answer_key": "Step decay, exponential decay, and cosine annealing.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the risk of tuning too many hyperparameters simultaneously?",
+        "answer_key": "Overfitting to the validation set.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the theoretical lower bound of classification error called?",
+        "answer_key": "Bayes optimal error.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What does Bayes optimal error represent?",
+        "answer_key": "The minimum achievable error given data’s inherent uncertainty.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Why can no model outperform the Bayes optimal classifier?",
+        "answer_key": "Because it represents the best possible decision boundary under true distributions.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What causes Bayes error to be non-zero in real problems?",
+        "answer_key": "Overlapping class distributions or noise in data.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the relationship between model error and Bayes error?",
+        "answer_key": "Model error ≥ Bayes error.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What are the components of total model error?",
+        "answer_key": "Bayes error, bias error, and variance error.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Why is Bayes error useful in theory?",
+        "answer_key": "It defines the ideal performance limit for any classifier.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Can we compute Bayes optimal error exactly in practice?",
+        "answer_key": "No, it requires full knowledge of true data distributions.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What does it mean if a model’s error is close to Bayes error?",
+        "answer_key": "It is nearly optimal given data limitations.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "How does noise in data influence Bayes optimal error?",
+        "answer_key": "Increased noise raises the Bayes error floor.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Why is it important to understand Bayes error during model evaluation?",
+        "answer_key": "To distinguish between model and data limitations.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the link between generalization and Bayes error?",
+        "answer_key": "Generalization error aims to approach Bayes error without overfitting.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "How does batch normalization relate to learning rate selection?",
+        "answer_key": "It allows higher learning rates by stabilizing updates.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the difference between normalization and standardization?",
+        "answer_key": "Normalization scales to [0,1]; standardization centers around mean 0 and unit variance.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Why do models converge faster after input normalization?",
+        "answer_key": "Gradients become well-conditioned and balanced across dimensions.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the effect of mini-batch size on batch normalization?",
+        "answer_key": "Small batches make mean and variance estimates less stable.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is layer normalization and how does it differ from batch normalization?",
+        "answer_key": "It normalizes across features per sample instead of across a batch.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Why is layer normalization preferred in RNNs and Transformers?",
+        "answer_key": "Because it’s independent of batch size and sequence length.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What does adaptive learning rate tuning aim to achieve?",
+        "answer_key": "To balance fast convergence with stable optimization.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the relationship between hyperparameter tuning and model generalization?",
+        "answer_key": "Good tuning reduces validation gap and improves unseen performance.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What does the Bayes decision rule aim to minimize?",
+        "answer_key": "Expected risk or classification error under true distributions.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What practical challenge arises when estimating Bayes optimal decision boundaries?",
+        "answer_key": "Unknown true probability distributions.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "Why is understanding theoretical limits important in deep learning?",
+        "answer_key": "To recognize the ceiling of achievable model performance.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the connection between hyperparameter tuning and optimization landscape?",
+        "answer_key": "Tuning shapes how efficiently the optimizer explores the cost surface.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is one reason batch normalization reduces sensitivity to initialization?",
+        "answer_key": "It rescales activations dynamically across layers.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the connection between batch normalization and regularization?",
+        "answer_key": "It acts as implicit regularization by introducing mini-batch noise.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "How does proper hyperparameter tuning affect convergence speed?",
+        "answer_key": "It accelerates learning and avoids unstable oscillations.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is a hyperparameter search space?",
+        "answer_key": "The defined range of possible values for hyperparameters.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the goal of approaching the Bayes optimal error?",
+        "answer_key": "To achieve near-ideal model performance constrained by data noise.",
+        "category": "Training Refinements"
+    },
+    {
+        "question": "What is the main goal of proper weight initialization?",
+        "answer_key": "To maintain stable activations and gradients during training.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What problem occurs when gradients become very small during backpropagation?",
+        "answer_key": "Vanishing gradients.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What problem occurs when gradients grow uncontrollably large?",
+        "answer_key": "Exploding gradients.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "Why do vanishing gradients slow down training?",
+        "answer_key": "Early layers receive near-zero updates and fail to learn.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "Why do exploding gradients cause instability?",
+        "answer_key": "Weights grow exponentially, causing divergence in training.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "Which activation functions are most prone to vanishing gradients?",
+        "answer_key": "Sigmoid and tanh.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "Which activation function is less affected by vanishing gradients?",
+        "answer_key": "ReLU and its variants.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the mathematical reason for vanishing gradients in deep networks?",
+        "answer_key": "Repeated multiplication of small derivatives (<1) across layers.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the mathematical reason for exploding gradients?",
+        "answer_key": "Repeated multiplication of large derivatives (>1) across layers.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "Why is zero initialization of weights problematic?",
+        "answer_key": "It causes symmetry—neurons learn the same features.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is random initialization used for?",
+        "answer_key": "To break symmetry between neurons.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is Xavier (Glorot) initialization designed for?",
+        "answer_key": "To keep variance of activations and gradients consistent across layers.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "For which activation functions is Xavier initialization ideal?",
+        "answer_key": "Sigmoid and tanh.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the variance formula for Xavier initialization?",
+        "answer_key": "Var(W) = 2 / (n_in + n_out).",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is He initialization designed for?",
+        "answer_key": "To maintain gradient flow in ReLU-based networks.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "For which activation functions is He initialization ideal?",
+        "answer_key": "ReLU and Leaky ReLU.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the variance formula for He initialization?",
+        "answer_key": "Var(W) = 2 / n_in.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "How do Xavier and He initialization differ conceptually?",
+        "answer_key": "He uses larger variance to compensate for ReLU’s zero activations.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What happens if weights are initialized too small?",
+        "answer_key": "Signals and gradients vanish quickly through layers.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What happens if weights are initialized too large?",
+        "answer_key": "Signals and gradients explode, causing instability.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the purpose of the bias initialization?",
+        "answer_key": "To shift activations and avoid dead neurons.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "Why should biases often start small or at zero?",
+        "answer_key": "They don’t affect symmetry and small values prevent bias dominance.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "How does proper initialization help convergence?",
+        "answer_key": "It maintains consistent signal variance across layers.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What does stable gradient flow mean?",
+        "answer_key": "Gradients neither vanish nor explode as they propagate backward.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "How is gradient clipping used to handle exploding gradients?",
+        "answer_key": "By capping gradient magnitudes to a maximum threshold.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is a typical use case for gradient clipping?",
+        "answer_key": "Recurrent Neural Networks (RNNs).",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the purpose of using normalized activations like BatchNorm?",
+        "answer_key": "To stabilize distributions and reduce dependence on initialization.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "How does Batch Normalization relate to gradient stability?",
+        "answer_key": "It normalizes activations, keeping gradients well-scaled.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the relationship between activation functions and initialization?",
+        "answer_key": "Initialization schemes are tailored to activation variance behavior.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What initialization helps avoid dying ReLU neurons?",
+        "answer_key": "He initialization with small random positive bias.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the intuition behind Xavier initialization?",
+        "answer_key": "Balance forward and backward variance for consistent signal flow.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the intuition behind He initialization?",
+        "answer_key": "Compensate for ReLU’s zero outputs by doubling input variance.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What are the parameters n_in and n_out in initialization formulas?",
+        "answer_key": "Number of input and output neurons for that layer.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "Why do deeper networks suffer more from vanishing gradients?",
+        "answer_key": "Because the gradient is repeatedly multiplied through more layers.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is a dead neuron in ReLU networks?",
+        "answer_key": "A neuron stuck outputting zero for all inputs due to negative weights.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "How can dying ReLUs be mitigated?",
+        "answer_key": "Use Leaky ReLU or proper initialization with small positive bias.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "Why are orthogonal initializations sometimes used?",
+        "answer_key": "To preserve variance across layers for deep linear or RNN models.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the benefit of using uniform vs normal initialization?",
+        "answer_key": "Uniform limits extremes; normal allows slight randomness for diversity.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "How does weight initialization impact training speed?",
+        "answer_key": "Good initialization accelerates convergence; poor slows or stalls learning.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the typical distribution used for Xavier initialization?",
+        "answer_key": "Uniform or normal distribution based on variance formula.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the typical distribution used for He initialization?",
+        "answer_key": "Normal distribution with variance 2/n_in.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What role do initialization strategies play in gradient-based optimization?",
+        "answer_key": "They determine the stability of early gradient propagation.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What happens to the loss landscape if weights are poorly initialized?",
+        "answer_key": "It becomes ill-conditioned, slowing or halting optimization.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "Why is initialization particularly important in deep networks?",
+        "answer_key": "Depth amplifies small imbalances in activation or gradient scaling.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What initialization method is recommended for tanh activation?",
+        "answer_key": "Xavier initialization.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What initialization method is recommended for ReLU activation?",
+        "answer_key": "He initialization.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What initialization is suitable for linear activations?",
+        "answer_key": "Xavier or orthogonal initialization.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "How can one detect vanishing or exploding gradients during training?",
+        "answer_key": "By monitoring gradient norms or loss stagnation/explosion.",
+        "category": "Weight Init And Gradient Stability"
+    },
+    {
+        "question": "What is the connection between initialization and network depth?",
+        "answer_key": "Deeper networks require variance-preserving initialization to stay stable.",
+        "category": "Weight Init And Gradient Stability"
+    }
+]
