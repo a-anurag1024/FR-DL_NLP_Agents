@@ -1,0 +1,1027 @@
+[
+    {
+        "question": "What is the goal of semantic segmentation?",
+        "answer_key": "Assign a class label to every pixel in an image.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "How does semantic segmentation differ from object detection?",
+        "answer_key": "Segmentation provides pixel-level labeling; detection provides bounding boxes.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the main output of a semantic segmentation model?",
+        "answer_key": "A dense mask with pixel-wise class predictions.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the key idea behind U-Net architecture?",
+        "answer_key": "An encoder-decoder network with skip connections for precise localization.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What task was U-Net originally designed for?",
+        "answer_key": "Biomedical image segmentation.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Why does U-Net use skip connections?",
+        "answer_key": "To combine spatial details from encoder with semantic info from decoder.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What are the two main parts of the U-Net architecture?",
+        "answer_key": "Contracting path (encoder) and expanding path (decoder).",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "How does the encoder in U-Net function?",
+        "answer_key": "Captures high-level context via convolutions and pooling.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "How does the decoder in U-Net function?",
+        "answer_key": "Upsamples and reconstructs spatial details using transpose convolutions.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What kind of skip connection is used in U-Net?",
+        "answer_key": "Concatenation of encoder feature maps with decoder feature maps.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Why is U-Net effective for medical image segmentation?",
+        "answer_key": "Handles limited data and requires precise boundary detection.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is instance segmentation?",
+        "answer_key": "Separates individual object instances in addition to classifying pixels.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the primary goal of face recognition systems?",
+        "answer_key": "Identify or verify an individual based on facial features.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "How is face recognition different from face detection?",
+        "answer_key": "Detection locates faces; recognition identifies who the face belongs to.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the purpose of a Siamese network?",
+        "answer_key": "Learn a similarity metric between pairs of inputs.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Why do Siamese networks share weights between branches?",
+        "answer_key": "To learn identical feature extraction for both inputs.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What loss function is typically used in Siamese networks?",
+        "answer_key": "Contrastive loss.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What does contrastive loss encourage in feature space?",
+        "answer_key": "Closer embeddings for similar pairs, farther for dissimilar pairs.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the main idea behind Triplet Loss?",
+        "answer_key": "Push anchor and positive closer, and anchor and negative farther apart.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What are the components of a triplet input?",
+        "answer_key": "Anchor, positive (same identity), and negative (different identity).",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What does the margin α in triplet loss represent?",
+        "answer_key": "The minimum desired distance between positive and negative pairs.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the goal of Triplet Loss optimization?",
+        "answer_key": "Ensure embeddings of same identity are closer than different ones.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What kind of embedding space do face recognition models learn?",
+        "answer_key": "A feature space where distance reflects facial similarity.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Which popular face recognition models use Triplet Loss?",
+        "answer_key": "FaceNet and DeepFace.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Why are embeddings preferred over direct classification in face recognition?",
+        "answer_key": "They generalize better to unseen identities.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is a key benefit of using Siamese or Triplet architectures?",
+        "answer_key": "Effective in few-shot or one-shot learning scenarios.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the main idea of Neural Style Transfer?",
+        "answer_key": "Blend content of one image with the artistic style of another.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Which pretrained CNN is commonly used for Neural Style Transfer?",
+        "answer_key": "VGG network (typically VGG-19).",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What are the two main components of the loss function in style transfer?",
+        "answer_key": "Content loss and style loss.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What does content loss measure?",
+        "answer_key": "Difference in feature activations between generated and content image.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What does style loss measure?",
+        "answer_key": "Difference between Gram matrices of style and generated image.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is a Gram matrix in style transfer?",
+        "answer_key": "Matrix representing correlations between feature maps.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Why are Gram matrices used in style loss?",
+        "answer_key": "Capture texture and style information independent of spatial position.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "How is the final stylized image generated in neural style transfer?",
+        "answer_key": "By optimizing pixel values to minimize total loss.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What are the inputs to a style transfer algorithm?",
+        "answer_key": "Content image, style image, and random initialization.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is total variation loss sometimes added for?",
+        "answer_key": "To smooth out noise and enforce spatial continuity in the output image.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What role does the pretrained CNN play in style transfer?",
+        "answer_key": "Extracts hierarchical content and style representations.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What optimization algorithm is typically used in neural style transfer?",
+        "answer_key": "Gradient-based optimization (like Adam or L-BFGS).",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is one limitation of classic neural style transfer?",
+        "answer_key": "Computationally expensive and slow for high-resolution images.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is fast neural style transfer?",
+        "answer_key": "A feedforward network trained to apply style in one forward pass.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is perceptual loss used for in generative vision models?",
+        "answer_key": "Measures feature similarity rather than pixel-level difference.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the general goal of generative vision models?",
+        "answer_key": "Create new, realistic, or artistic visual data.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "How do encoder-decoder architectures relate to segmentation and generation?",
+        "answer_key": "Encoders extract features; decoders reconstruct or generate images.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Why are CNNs effective in high-level vision applications?",
+        "answer_key": "They learn hierarchical spatial features relevant for visual understanding.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What kind of data representation do face recognition systems typically output?",
+        "answer_key": "Fixed-length embedding vectors.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Why is triplet mining important in Triplet Loss training?",
+        "answer_key": "Selects meaningful and hard examples to improve learning efficiency.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the advantage of U-Net over plain encoder-decoder networks?",
+        "answer_key": "Skip connections preserve fine-grained spatial information.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "How do neural style transfer and GANs differ conceptually?",
+        "answer_key": "Style transfer optimizes an image; GANs learn to generate via adversarial training.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is a practical application of neural style transfer?",
+        "answer_key": "Art generation and real-time video stylization.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What is the primary evaluation metric for segmentation tasks?",
+        "answer_key": "Intersection over Union (IoU) or pixel accuracy.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "Why is pixel-wise labeling computationally intensive?",
+        "answer_key": "Requires classifying every pixel in large images.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "How do embeddings improve robustness in face recognition?",
+        "answer_key": "Reduce sensitivity to lighting, pose, and expression variations.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What key idea unifies all advanced vision applications?",
+        "answer_key": "Feature representation learning through convolutional hierarchies.",
+        "category": "Advanced Vision Applications"
+    },
+    {
+        "question": "What was LeNet primarily designed for?",
+        "answer_key": "Handwritten digit recognition (MNIST dataset).",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the architectural pattern of LeNet?",
+        "answer_key": "Conv → Pool → Conv → Pool → FC → Softmax.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What key concept did LeNet introduce in CNNs?",
+        "answer_key": "Local receptive fields and weight sharing.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What made AlexNet a breakthrough in deep learning?",
+        "answer_key": "Use of GPUs, ReLU activation, and dropout regularization.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What dataset was AlexNet trained on?",
+        "answer_key": "ImageNet dataset.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "How many layers did AlexNet have?",
+        "answer_key": "8 layers (5 conv + 3 fully connected).",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "Why was ReLU crucial in AlexNet?",
+        "answer_key": "It mitigated vanishing gradients and sped up training.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What role did dropout play in AlexNet?",
+        "answer_key": "Prevented overfitting by randomly dropping neurons.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the core design principle behind VGG networks?",
+        "answer_key": "Stacking small 3×3 filters deeply for better feature extraction.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the key feature of VGG-16 architecture?",
+        "answer_key": "16 weight layers with uniform 3×3 conv filters.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the main limitation of VGG models?",
+        "answer_key": "High memory and computational requirements.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the advantage of smaller filters (3×3) in VGG?",
+        "answer_key": "Increases non-linearity while keeping fewer parameters.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What problem did ResNet solve in deep networks?",
+        "answer_key": "Vanishing gradient problem in very deep architectures.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the core idea behind ResNet?",
+        "answer_key": "Residual learning via skip (shortcut) connections.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What does a ResNet block compute?",
+        "answer_key": "F(x) + x, where F(x) is the residual mapping.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "Why are skip connections effective in ResNet?",
+        "answer_key": "They allow gradients to flow directly across layers.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "How deep can ResNet architectures go?",
+        "answer_key": "Up to 152 layers or more.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What was the key innovation of the Inception network?",
+        "answer_key": "Multi-scale feature extraction using parallel convolutions.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What does an Inception block combine?",
+        "answer_key": "1×1, 3×3, 5×5 convolutions and pooling in parallel.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the role of 1×1 convolutions in Inception blocks?",
+        "answer_key": "Reduces dimensionality and computational cost.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the nickname of GoogLeNet?",
+        "answer_key": "Inception v1.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "How does Inception improve efficiency over VGG?",
+        "answer_key": "Uses factorized convolutions and dimensionality reduction.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "Why were auxiliary classifiers used in Inception v1?",
+        "answer_key": "To improve gradient flow and reduce overfitting.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is a key advantage of Inception networks?",
+        "answer_key": "Captures features at multiple spatial scales.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the main motivation for using 1×1 convolutions?",
+        "answer_key": "Channel-wise information mixing and dimension reduction.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is a depthwise convolution?",
+        "answer_key": "Applies one filter per input channel separately.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is a pointwise convolution?",
+        "answer_key": "A 1×1 convolution combining channel outputs from depthwise step.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is a depthwise separable convolution?",
+        "answer_key": "A combination of depthwise and pointwise convolutions for efficiency.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "Why are depthwise separable convolutions efficient?",
+        "answer_key": "They drastically reduce parameters and computation.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the main concept behind MobileNet V1?",
+        "answer_key": "Entirely built using depthwise separable convolutions.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What type of trade-off does MobileNet V1 control?",
+        "answer_key": "Accuracy vs computational cost via width and resolution multipliers.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "How much computational saving does MobileNet V1 achieve?",
+        "answer_key": "Approximately 8–9× fewer computations than standard convs.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What architectural innovation was introduced in MobileNet V2?",
+        "answer_key": "Inverted residuals and linear bottlenecks.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is an inverted residual block?",
+        "answer_key": "Expands features, applies depthwise conv, then projects back to low dimension.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "Why does MobileNet V2 use linear bottlenecks?",
+        "answer_key": "To prevent loss of information in low-dimensional embeddings.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "How does MobileNet differ from ResNet in design philosophy?",
+        "answer_key": "MobileNet focuses on efficiency, ResNet on depth and gradient flow.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the advantage of 1×1 convolutions in MobileNets?",
+        "answer_key": "Efficiently mixes information across channels.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What does 'pointwise convolution' mean in 1-D signal processing?",
+        "answer_key": "Applying convolution over a single dimension (time or sequence).",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "Where is 1-D convolution commonly used?",
+        "answer_key": "In time-series and speech signal modeling.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "How does 1-D convolution differ from 2-D convolution?",
+        "answer_key": "It slides along one dimension instead of two (height, width).",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "Which architecture introduced the concept of bottleneck layers?",
+        "answer_key": "Inception and later refined in ResNet and MobileNet V2.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What optimization does ResNet enable for deep networks?",
+        "answer_key": "Easier gradient propagation and faster convergence.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "How do residual connections affect model expressiveness?",
+        "answer_key": "Allow layers to learn identity mappings if needed.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What does 'Network in Network' mean in Inception?",
+        "answer_key": "Using 1×1 convolutions to add depth and non-linearity.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "Which CNN was the first to achieve superhuman performance on ImageNet?",
+        "answer_key": "ResNet.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the trade-off between VGG and Inception models?",
+        "answer_key": "VGG is simpler but heavy; Inception is complex but efficient.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "Why do deeper CNNs perform better up to a point?",
+        "answer_key": "They learn hierarchical features, but risk vanishing gradients.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What innovation allows ResNet to train very deep models stably?",
+        "answer_key": "Skip connections bypassing non-linear layers.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What principle underlies most CNN architecture evolution?",
+        "answer_key": "Balancing depth, efficiency, and representational power.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "How does MobileNet enable on-device deployment?",
+        "answer_key": "Low computation and memory footprint suitable for mobile CPUs.",
+        "category": "Cnn Architechture Design Innovations"
+    },
+    {
+        "question": "What is the main purpose of convolution in CNNs?",
+        "answer_key": "Extract spatial features from input images.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "How does a convolutional layer differ from a fully connected layer?",
+        "answer_key": "Uses local connections and shared weights instead of global ones.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What does a convolution filter (kernel) do?",
+        "answer_key": "Slides over the image to detect specific spatial patterns.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the receptive field in CNNs?",
+        "answer_key": "The region of input data that affects a single output neuron.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "How does filter size affect feature extraction?",
+        "answer_key": "Larger filters capture global features; smaller ones capture fine details.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is stride in a convolution operation?",
+        "answer_key": "The step size by which the filter moves across the input.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is padding and why is it used?",
+        "answer_key": "Adds borders to preserve spatial dimensions after convolution.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the difference between 'valid' and 'same' padding?",
+        "answer_key": "'Valid' causes size reduction; 'same' preserves input dimensions.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why are convolutional filters shared across spatial locations?",
+        "answer_key": "To reduce parameters and exploit spatial invariance.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is a feature map?",
+        "answer_key": "The output of a convolution representing detected features.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why do CNNs use multiple filters in each layer?",
+        "answer_key": "To detect different kinds of features at the same layer.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What happens when you increase the number of filters in a layer?",
+        "answer_key": "Increases representational power but also computational cost.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What are multi-channel inputs in CNNs?",
+        "answer_key": "Inputs with multiple color or feature channels (e.g., RGB).",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "How does convolution work with multi-channel inputs?",
+        "answer_key": "Each filter spans all input channels and produces one output map.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is a multi-channel filter?",
+        "answer_key": "A filter that processes all input channels simultaneously.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why do CNNs outperform fully connected networks on images?",
+        "answer_key": "They preserve spatial structure and reduce parameters.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What are the three main types of layers in CNNs?",
+        "answer_key": "Convolutional, pooling, and fully connected layers.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the function of a convolutional layer?",
+        "answer_key": "Extracts local spatial features via learned filters.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the function of a pooling layer?",
+        "answer_key": "Reduces spatial dimensions while retaining key information.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the main advantage of pooling?",
+        "answer_key": "Provides translation invariance and reduces overfitting.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What are the common types of pooling operations?",
+        "answer_key": "Max pooling and average pooling.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is max pooling?",
+        "answer_key": "Selects the maximum activation in a pooling window.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is average pooling?",
+        "answer_key": "Computes the mean activation within a pooling window.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why are pooling layers often used after convolution layers?",
+        "answer_key": "To downsample features and retain dominant activations.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What does the fully connected layer do in CNNs?",
+        "answer_key": "Combines extracted features for classification or regression.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What happens during flattening in CNN architecture?",
+        "answer_key": "Feature maps are converted into a 1D vector before FC layers.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What activation function is commonly used after convolutional layers?",
+        "answer_key": "ReLU (Rectified Linear Unit).",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why is ReLU preferred in CNNs?",
+        "answer_key": "Prevents vanishing gradients and accelerates training.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "How do CNNs handle high-dimensional image data efficiently?",
+        "answer_key": "By local connectivity and parameter sharing.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What property makes CNNs translation invariant?",
+        "answer_key": "Pooling and shared filters across spatial locations.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the output shape formula for a convolution layer?",
+        "answer_key": "(W−F+2P)/S + 1, where W=width, F=filter size, P=padding, S=stride.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the role of depth (number of channels) in feature maps?",
+        "answer_key": "Represents the number of learned features at that layer.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What happens to spatial and depth dimensions across CNN layers?",
+        "answer_key": "Spatial size decreases; depth typically increases.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why do CNNs reduce overfitting compared to fully connected networks?",
+        "answer_key": "They have fewer parameters and local connectivity.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is local connectivity in CNNs?",
+        "answer_key": "Each neuron connects only to a small region of the input.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "How is backpropagation applied in CNNs?",
+        "answer_key": "Gradients are computed for filters and propagated through layers.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why are CNNs well-suited for image data?",
+        "answer_key": "They capture spatial hierarchies through local receptive fields.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What does zero-padding achieve?",
+        "answer_key": "Prevents shrinking of feature maps after convolution.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "How does stride > 1 affect output feature maps?",
+        "answer_key": "Reduces spatial resolution and computational load.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What does 'shared weights' mean in CNNs?",
+        "answer_key": "Same filter applied across all spatial positions.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why is it beneficial for CNNs to share weights?",
+        "answer_key": "Reduces parameter count and captures repeated patterns.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What happens when no padding is applied in convolution?",
+        "answer_key": "Output feature maps become smaller than input.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the effect of increasing filter size in convolution?",
+        "answer_key": "Captures more global patterns but increases computation.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "How do CNNs achieve hierarchical feature extraction?",
+        "answer_key": "Stacking multiple conv + pooling layers progressively.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What does each convolutional layer learn in a CNN?",
+        "answer_key": "Feature detectors of increasing complexity.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the relationship between number of parameters and overfitting?",
+        "answer_key": "More parameters can increase risk of overfitting.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is a kernel in CNN terminology?",
+        "answer_key": "A small weight matrix used for convolution.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why do deeper layers in CNNs detect complex patterns?",
+        "answer_key": "They combine outputs from earlier, simpler feature maps.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "How does pooling contribute to translation invariance?",
+        "answer_key": "Retains maximum or average feature regardless of small shifts.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "Why is flattening necessary before fully connected layers?",
+        "answer_key": "Transforms 2D feature maps into 1D vector input.",
+        "category": "Cnn Foundations"
+    },
+    {
+        "question": "What is the goal of object detection?",
+        "answer_key": "Identify and locate multiple objects within an image.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "How does image classification differ from object detection?",
+        "answer_key": "Classification predicts one label; detection predicts labels with bounding boxes.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What does image localization output?",
+        "answer_key": "A class label and a bounding box around the object.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What are the typical bounding box coordinates predicted in localization?",
+        "answer_key": "(x_center, y_center, width, height).",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the sliding window method in object detection?",
+        "answer_key": "A technique that scans an image with fixed-size windows for object presence.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the main drawback of the sliding window method?",
+        "answer_key": "Computationally expensive and redundant for large images.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "How does the sliding window method improve when used with ConvNets?",
+        "answer_key": "Feature sharing through convolution reduces redundant computation.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is Intersection over Union (IoU)?",
+        "answer_key": "Ratio of overlap area to the union area of predicted and ground truth boxes.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What does a high IoU indicate?",
+        "answer_key": "Better alignment between predicted and true bounding boxes.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What IoU threshold is typically used to define a correct detection?",
+        "answer_key": "0.5 or higher.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the purpose of Non-Max Suppression (NMS)?",
+        "answer_key": "Removes redundant overlapping boxes for the same object.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the main idea behind NMS?",
+        "answer_key": "Keep the highest-confidence box and remove boxes with high IoU overlap.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What are anchor boxes?",
+        "answer_key": "Predefined bounding boxes of various shapes and sizes used for detection.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "Why are anchor boxes important in object detection models?",
+        "answer_key": "Allow detection of multiple objects of different scales in the same cell.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What problem do anchor boxes solve?",
+        "answer_key": "Handling varied object sizes and aspect ratios.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is YOLO short for?",
+        "answer_key": "You Only Look Once.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the main advantage of YOLO?",
+        "answer_key": "Performs object detection in a single forward pass (real-time).",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the core design idea of YOLO?",
+        "answer_key": "Treats detection as a single regression problem from image to bounding boxes and classes.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "How does YOLO divide the image for prediction?",
+        "answer_key": "Splits the image into an S×S grid; each cell predicts bounding boxes and class probabilities.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is a major limitation of YOLO v1?",
+        "answer_key": "Struggles with small or overlapping objects.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the output of a YOLO grid cell?",
+        "answer_key": "Bounding box coordinates, confidence score, and class probabilities.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "Why is YOLO fast compared to R-CNN models?",
+        "answer_key": "It predicts all boxes in one forward pass instead of region-by-region processing.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What metric does YOLO use to evaluate bounding box accuracy?",
+        "answer_key": "Intersection over Union (IoU).",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the main purpose of confidence scores in YOLO?",
+        "answer_key": "Represent the probability that a box contains an object.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the R-CNN algorithm designed for?",
+        "answer_key": "Detecting objects using region proposals and CNN feature extraction.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "How does R-CNN generate candidate regions?",
+        "answer_key": "Uses selective search to propose region candidates.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What are the drawbacks of R-CNN?",
+        "answer_key": "Slow due to redundant CNN computations for thousands of regions.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "How does Fast R-CNN improve over R-CNN?",
+        "answer_key": "Computes feature maps once and applies region pooling for proposals.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is RoI pooling in Fast R-CNN?",
+        "answer_key": "Extracts fixed-size feature maps from region proposals.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "How does Faster R-CNN improve upon Fast R-CNN?",
+        "answer_key": "Introduces a Region Proposal Network (RPN) for learning region proposals.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the main function of the Region Proposal Network (RPN)?",
+        "answer_key": "Generates object candidate boxes directly from convolutional features.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "Why is Faster R-CNN considered end-to-end?",
+        "answer_key": "It jointly trains region proposal and detection networks together.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is a two-stage detector?",
+        "answer_key": "A model that first proposes regions, then classifies them (e.g., Faster R-CNN).",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is a one-stage detector?",
+        "answer_key": "A model that predicts boxes and classes directly in a single step (e.g., YOLO).",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the speed-accuracy trade-off between YOLO and Faster R-CNN?",
+        "answer_key": "YOLO is faster; Faster R-CNN is more accurate.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the role of IoU in Non-Max Suppression?",
+        "answer_key": "Used to measure overlap when suppressing redundant boxes.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "Why do detectors predict multiple boxes per grid cell?",
+        "answer_key": "To detect multiple objects with different shapes and positions.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What causes YOLO to miss small objects?",
+        "answer_key": "Grid cells have limited capacity to represent multiple close objects.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is a region proposal in object detection?",
+        "answer_key": "A candidate image region likely to contain an object.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "How is mean Average Precision (mAP) used in detection tasks?",
+        "answer_key": "Evaluates detection accuracy across all classes and IoU thresholds.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "Why are CNN-based detectors preferred over traditional methods?",
+        "answer_key": "They learn hierarchical visual features automatically.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "How do anchor boxes affect the output size in detection models?",
+        "answer_key": "Each cell predicts multiple boxes proportional to the number of anchors.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What makes YOLO real-time capable?",
+        "answer_key": "Single-shot inference using global image features.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is a main drawback of R-CNN-style detectors?",
+        "answer_key": "High computational cost and slower inference.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What does Faster R-CNN share between RPN and detection heads?",
+        "answer_key": "Convolutional feature maps.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "Why are two-stage detectors more accurate than one-stage detectors?",
+        "answer_key": "They refine candidate regions with additional processing.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the primary difference between YOLO and SSD?",
+        "answer_key": "YOLO uses grid-based prediction; SSD uses multi-scale feature maps.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What type of algorithm is NMS considered?",
+        "answer_key": "Post-processing step for bounding box selection.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "How does YOLO balance speed and accuracy?",
+        "answer_key": "Through a single network that jointly predicts all detections.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What makes anchor boxes important for training stability?",
+        "answer_key": "They align predicted boxes with varied ground truth shapes.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What is the key benefit of region-based detection?",
+        "answer_key": "More accurate localization via focused region analysis.",
+        "category": "Object Detection And Localization"
+    },
+    {
+        "question": "What kind of network architecture is typically used for object detection backbones?",
+        "answer_key": "Pretrained CNNs like VGG, ResNet, or MobileNet.",
+        "category": "Object Detection And Localization"
+    }
+]

@@ -46,4 +46,5 @@ def merge_qna_jsons(folder_path, output_path="merged_qna.json"):
     print(f"Merged {len(merged_data)} questions from {len(list(folder.glob('*.json')))} files into '{output_path}'.")
 
 
-merge_qna_jsons("subtopic_qnas/DL_fundamentals", "qna.json")
+#merge_qna_jsons("subtopic_qnas/DL_fundamentals", "qna.json")
+merge_qna_jsons("subtopic_qnas/Computer_Vision", "topics/Computer_Vision/qna.json")
