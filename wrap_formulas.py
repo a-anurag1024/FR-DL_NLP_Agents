@@ -1,7 +1,7 @@
 import re
 
-input_path = "topics/DL_fundamentals/review.md"
-output_path = "topics/DL_fundamentals/review.md"
+input_path = "topics/Sequence_Models/review.md"
+output_path = "topics/Sequence_Models/review.md"
 
 with open(input_path, "r", encoding="utf-8") as f:
     content = f.read()

@@ -1,0 +1,927 @@
+[
+    {
+        "question": "What problem do attention mechanisms solve in Seq2Seq models?",
+        "answer_key": "They remove the fixed-length bottleneck by focusing on relevant input parts dynamically.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the core idea of the attention mechanism?",
+        "answer_key": "Compute weighted combinations of all encoder hidden states based on relevance to the decoder state.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the output of an attention mechanism?",
+        "answer_key": "A context vector representing a weighted sum of encoder states.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "How are attention weights computed?",
+        "answer_key": "By comparing the decoder state with each encoder state using a scoring function.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What does the softmax function do in attention?",
+        "answer_key": "Normalizes attention scores into probability weights.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What are common attention scoring functions?",
+        "answer_key": "Dot-product, scaled dot-product, and additive (Bahdanau) attention.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is Bahdanau (additive) attention?",
+        "answer_key": "An attention type using a feed-forward network to compute alignment scores.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is Luong (dot-product) attention?",
+        "answer_key": "Computes similarity between hidden states using dot product.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the main advantage of attention over context vectors in Seq2Seq?",
+        "answer_key": "Allows the decoder to access all encoder states instead of one compressed vector.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is self-attention?",
+        "answer_key": "A mechanism where each token attends to all other tokens in the same sequence.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "Why is self-attention powerful?",
+        "answer_key": "It captures long-range dependencies without recurrence.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What are the three components of self-attention?",
+        "answer_key": "Query (Q), Key (K), and Value (V) vectors.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "How are Query, Key, and Value vectors obtained?",
+        "answer_key": "By multiplying input embeddings with learned projection matrices W_Q, W_K, W_V.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What does the attention(Q, K, V) formula represent?",
+        "answer_key": "Softmax(QKᵀ / √d_k) × V — computes weighted averages of values based on similarity.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "Why is the term √d_k used in scaled dot-product attention?",
+        "answer_key": "To prevent large dot products that destabilize softmax gradients.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What does a high attention weight indicate?",
+        "answer_key": "The corresponding token is highly relevant to the current word.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the advantage of attention being differentiable?",
+        "answer_key": "It allows end-to-end training via backpropagation.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is multi-head attention?",
+        "answer_key": "Running multiple attention mechanisms in parallel to capture diverse relationships.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "Why use multiple heads in multi-head attention?",
+        "answer_key": "Each head learns different types of dependencies or relations.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "How are outputs from multiple attention heads combined?",
+        "answer_key": "Concatenated and linearly transformed with W_O projection.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is positional encoding used for in Transformers?",
+        "answer_key": "To inject sequence order information into input embeddings.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "Why are positional encodings necessary in Transformers?",
+        "answer_key": "Because self-attention is permutation-invariant and lacks inherent order awareness.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What type of functions are used for positional encoding?",
+        "answer_key": "Sine and cosine functions of varying frequencies.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What does the positional encoding formula depend on?",
+        "answer_key": "Token position (pos) and embedding dimension (i).",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What are the main components of the Transformer encoder?",
+        "answer_key": "Multi-head self-attention, feed-forward network, residual connections, and layer normalization.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What are the main components of the Transformer decoder?",
+        "answer_key": "Masked self-attention, encoder-decoder attention, feed-forward layers.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is masking used for in decoder self-attention?",
+        "answer_key": "To prevent attending to future tokens during training.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "Why are residual connections used in Transformer layers?",
+        "answer_key": "To ease gradient flow and stabilize deep training.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What does layer normalization achieve?",
+        "answer_key": "It stabilizes activations by normalizing across features.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the role of the feed-forward layer in Transformers?",
+        "answer_key": "Applies non-linear transformations to each token independently.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "How does the Transformer differ from RNNs?",
+        "answer_key": "It processes all tokens in parallel instead of sequentially.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What makes Transformers more efficient than RNNs?",
+        "answer_key": "Parallelization and reduced path length between dependencies.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the computational complexity of self-attention?",
+        "answer_key": "O(n²) due to pairwise token interactions.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What type of attention do Transformers primarily use?",
+        "answer_key": "Scaled dot-product self-attention.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is cross-attention in the Transformer decoder?",
+        "answer_key": "Mechanism where decoder queries attend to encoder outputs.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "Why are Transformers easier to train than RNNs?",
+        "answer_key": "No sequential dependencies, enabling better gradient propagation.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What optimizer is commonly used to train Transformers?",
+        "answer_key": "Adam with learning rate warmup and decay schedule.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the loss function typically used in Transformer models?",
+        "answer_key": "Cross-entropy loss over the output vocabulary.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What innovation made Transformers replace RNNs in NLP?",
+        "answer_key": "Self-attention enabling parallel sequence processing.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What does the term 'attention is all you need' refer to?",
+        "answer_key": "The paper that introduced the Transformer architecture.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "Who introduced the Transformer model?",
+        "answer_key": "Vaswani et al., 2017.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What does the encoder–decoder attention in Transformers achieve?",
+        "answer_key": "Links target-side queries to source-side representations.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What type of data structure best represents attention weights?",
+        "answer_key": "An attention matrix of size (sequence_length × sequence_length).",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "How does attention improve interpretability in NLP models?",
+        "answer_key": "It reveals which input tokens influence each output token.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the advantage of Transformers in long-range dependency modeling?",
+        "answer_key": "They connect distant tokens directly without recursion.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What are the main successors of the Transformer architecture?",
+        "answer_key": "BERT, GPT, T5, and their variants.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the difference between BERT and GPT architectures?",
+        "answer_key": "BERT is bidirectional; GPT is unidirectional and autoregressive.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "Why is the Transformer architecture scalable to large datasets?",
+        "answer_key": "It supports parallel computation and distributed training.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the major bottleneck of self-attention in long sequences?",
+        "answer_key": "Quadratic memory and computation growth with sequence length.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What are some Transformer variants addressing long-sequence limitations?",
+        "answer_key": "Longformer, Performer, Reformer, and Linformer.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "How is attention related to alignment in translation tasks?",
+        "answer_key": "Attention weights act as soft alignments between input and output tokens.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What makes Transformers suitable for pretraining large language models?",
+        "answer_key": "They capture global dependencies and scale efficiently with data.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the typical depth of Transformer encoder and decoder stacks?",
+        "answer_key": "Usually 6 layers each in the original model.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "How does attention contribute to contextual representation learning?",
+        "answer_key": "It dynamically weighs relevant parts of context for each token.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the function of positional encoding in self-attention equations?",
+        "answer_key": "Adds sequential order information to position-invariant attention.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the embedding dimension commonly used in the Transformer base model?",
+        "answer_key": "512 dimensions.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the feed-forward hidden size in the Transformer base configuration?",
+        "answer_key": "2048 dimensions.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "Why are residual connections vital in deep Transformer stacks?",
+        "answer_key": "They help preserve information and stabilize gradient flow.",
+        "category": "Attention Mechanism"
+    },
+    {
+        "question": "What is the main goal of sequence modeling in NLP?",
+        "answer_key": "To map input sequences to output sequences capturing temporal dependencies.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is a Sequence-to-Sequence (Seq2Seq) model?",
+        "answer_key": "An encoder-decoder architecture that transforms one sequence into another.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "Which components form the backbone of Seq2Seq architecture?",
+        "answer_key": "Encoder and Decoder RNNs (often LSTM or GRU).",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the role of the encoder in a Seq2Seq model?",
+        "answer_key": "Encodes the input sequence into a fixed-length context vector.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the role of the decoder in a Seq2Seq model?",
+        "answer_key": "Generates the output sequence using the encoded context.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What type of problem does Seq2Seq architecture solve?",
+        "answer_key": "Variable-length input to variable-length output problems.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is a context vector in Seq2Seq models?",
+        "answer_key": "A compressed representation summarizing the input sequence.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "Why does the Seq2Seq model struggle with long sentences?",
+        "answer_key": "Fixed-length context vector causes information bottleneck.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the main training objective of Seq2Seq models?",
+        "answer_key": "To maximize the likelihood of the target sequence given the input sequence.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is Neural Machine Translation (NMT)?",
+        "answer_key": "Task of translating text between languages using neural networks.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What distinguishes NMT from traditional statistical translation models?",
+        "answer_key": "NMT is end-to-end and learns representations directly from data.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What type of data does NMT require for training?",
+        "answer_key": "Parallel bilingual sentence pairs.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What does the decoder output at each time step in NMT?",
+        "answer_key": "Probability distribution over the target vocabulary.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is teacher forcing in Seq2Seq training?",
+        "answer_key": "Using the ground truth token as the next input during training.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "Why is teacher forcing used?",
+        "answer_key": "It accelerates convergence and stabilizes training.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is exposure bias in Seq2Seq models?",
+        "answer_key": "The mismatch between training (using ground truth) and inference (using predictions).",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the loss function commonly used in NMT?",
+        "answer_key": "Cross-entropy loss over predicted word probabilities.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the purpose of beam search in sequence generation?",
+        "answer_key": "To find the most probable output sequence by exploring multiple hypotheses.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "How does greedy search work during decoding?",
+        "answer_key": "Selects the highest probability token at each step.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the drawback of greedy search?",
+        "answer_key": "It may miss globally optimal sequences due to local decisions.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "How does beam search differ from greedy search?",
+        "answer_key": "Keeps top-k candidate sequences instead of just one at each step.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the beam width in beam search?",
+        "answer_key": "The number of top candidate sequences maintained at each decoding step.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "How does increasing beam width affect performance?",
+        "answer_key": "Improves accuracy but increases computation time.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "Why can beam search favor shorter sentences?",
+        "answer_key": "Multiplying probabilities reduces scores for longer sequences.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the problem of length bias in beam search?",
+        "answer_key": "Shorter sequences get higher overall probability scores.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the normalized log-likelihood objective used for?",
+        "answer_key": "To penalize shorter outputs by dividing log probability by sequence length.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What does the normalized log-likelihood formula look like?",
+        "answer_key": "Average log probability per token: (1/T) * Σ log P(y_t | y_<t, x).",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is a practical beam width range in NMT decoding?",
+        "answer_key": "Typically between 5 and 10.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What happens if beam width is too large?",
+        "answer_key": "It increases computation and may overfit to frequent patterns.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is diverse beam search?",
+        "answer_key": "A variant that encourages diversity among beam candidates.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the advantage of using diverse beam search?",
+        "answer_key": "Prevents generating near-duplicate candidate sequences.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What does sequence probability represent in Seq2Seq models?",
+        "answer_key": "Product of conditional probabilities of each word in the sequence.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the role of softmax in the decoder output layer?",
+        "answer_key": "Converts logits to probabilities over the vocabulary.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "Why do Seq2Seq models use recurrent units like LSTM or GRU?",
+        "answer_key": "To capture temporal dependencies and manage long-term context.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the difference between autoregressive and non-autoregressive decoding?",
+        "answer_key": "Autoregressive predicts one token at a time; non-autoregressive predicts all at once.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "Why are Seq2Seq models considered autoregressive?",
+        "answer_key": "Each token prediction depends on previous predicted tokens.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the purpose of padding in sequence models?",
+        "answer_key": "To ensure uniform sequence lengths for batch processing.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What are common evaluation metrics for NMT models?",
+        "answer_key": "BLEU, METEOR, ROUGE.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What does BLEU score measure?",
+        "answer_key": "Precision-based overlap between predicted and reference translations.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "Why do longer sequences reduce BLEU score?",
+        "answer_key": "Because exact n-gram matches become rarer in long outputs.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the role of the start-of-sequence and end-of-sequence tokens?",
+        "answer_key": "Mark beginning and termination of output generation.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is a major limitation of Seq2Seq without attention?",
+        "answer_key": "Difficulty handling long-range dependencies.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "How do attention mechanisms improve Seq2Seq models?",
+        "answer_key": "By allowing dynamic focus on different parts of the input sequence.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is backpropagation through time (BPTT) used for in Seq2Seq training?",
+        "answer_key": "To compute gradients across all time steps of encoder and decoder.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the inference objective in sequence generation?",
+        "answer_key": "To find the sequence maximizing conditional log-likelihood given input.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the trade-off in decoding between quality and efficiency?",
+        "answer_key": "Larger beams improve quality but increase computation cost.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What type of architecture replaced RNN-based Seq2Seq models in modern NLP?",
+        "answer_key": "Transformer architecture.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What fundamental concept connects Seq2Seq and Transformers?",
+        "answer_key": "Both use encoder–decoder frameworks with attention.",
+        "category": "Sequence Modelling Nlp Tasks"
+    },
+    {
+        "question": "What is the main idea behind Recurrent Neural Networks (RNN)?",
+        "answer_key": "Maintain hidden state to capture temporal dependencies.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "How do RNNs differ from feedforward neural networks?",
+        "answer_key": "RNNs share weights across time steps and have feedback connections.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What type of data are RNNs primarily designed to handle?",
+        "answer_key": "Sequential or time-dependent data.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is the key mathematical operation in RNN recurrence?",
+        "answer_key": "Hidden state update using previous hidden state and current input.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "Why do RNNs suffer from vanishing or exploding gradients?",
+        "answer_key": "Gradients multiply repeatedly during backpropagation through time.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What causes vanishing gradients in RNNs?",
+        "answer_key": "Repeated multiplication by small derivatives of activation functions.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is gradient clipping used for?",
+        "answer_key": "To prevent exploding gradients during training.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "How do gated architectures like LSTM and GRU address vanishing gradients?",
+        "answer_key": "By introducing gates that regulate information flow and gradient flow.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is the role of the forget gate in an LSTM?",
+        "answer_key": "Controls how much past information is retained in the cell state.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is the purpose of the input gate in an LSTM?",
+        "answer_key": "Decides which new information is added to the cell state.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is the function of the output gate in an LSTM?",
+        "answer_key": "Determines which part of the cell state is output at each time step.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is the main difference between GRU and LSTM?",
+        "answer_key": "GRU has fewer gates and merges the cell and hidden states.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "Name the two gates in a GRU.",
+        "answer_key": "Update gate and reset gate.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "Which RNN variant is faster to train, GRU or LSTM?",
+        "answer_key": "GRU due to fewer parameters.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is the key advantage of LSTMs over vanilla RNNs?",
+        "answer_key": "Better handling of long-term dependencies.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "How do bidirectional RNNs differ from unidirectional ones?",
+        "answer_key": "They process sequences both forward and backward.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "Why are bidirectional RNNs beneficial in NLP tasks?",
+        "answer_key": "They capture both past and future context for each token.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "Why can't bidirectional RNNs be used for real-time sequence prediction?",
+        "answer_key": "They require access to the entire sequence before processing.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What activation functions are commonly used in RNNs?",
+        "answer_key": "Tanh and ReLU.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is the purpose of Backpropagation Through Time (BPTT)?",
+        "answer_key": "To compute gradients across all time steps in RNNs.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "How does truncated BPTT improve training efficiency?",
+        "answer_key": "Limits gradient computation to a fixed number of time steps.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What does the hidden state in an RNN represent?",
+        "answer_key": "Memory of past inputs up to the current time step.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "Why is parameter sharing important in RNNs?",
+        "answer_key": "Reduces model complexity and allows generalization across time steps.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is a typical application of bidirectional RNNs?",
+        "answer_key": "Part-of-speech tagging or sentiment analysis.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is the main limitation of vanilla RNNs?",
+        "answer_key": "They fail to capture long-term dependencies.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "Which LSTM component is responsible for long-term memory preservation?",
+        "answer_key": "The cell state.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is the output of a bidirectional RNN at each time step?",
+        "answer_key": "Concatenation of forward and backward hidden states.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "Why are LSTMs computationally more expensive than RNNs?",
+        "answer_key": "They use multiple gates and additional parameters.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "How does a GRU merge short-term and long-term dependencies?",
+        "answer_key": "Through its update gate controlling hidden state blending.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What’s the main intuition behind gating mechanisms in RNNs?",
+        "answer_key": "Control how much past and current information is remembered or forgotten.",
+        "category": "Sequence Model Foundations"
+    },
+    {
+        "question": "What is a word embedding?",
+        "answer_key": "A dense vector representation capturing semantic meaning of a word.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Why are word embeddings preferred over one-hot encoding?",
+        "answer_key": "They capture semantic similarity and reduce dimensionality.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is an embedding matrix?",
+        "answer_key": "A trainable matrix mapping word indices to their vector embeddings.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What do the dimensions of an embedding matrix represent?",
+        "answer_key": "Vocabulary size × embedding dimension.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "How are embeddings learned during model training?",
+        "answer_key": "Through backpropagation minimizing a task-specific loss.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is the core idea behind Word2Vec?",
+        "answer_key": "Learn word vectors by predicting context words or target words.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What are the two architectures used in Word2Vec?",
+        "answer_key": "Continuous Bag of Words (CBOW) and Skip-Gram.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What does the CBOW model do?",
+        "answer_key": "Predicts a target word from its surrounding context words.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What does the Skip-Gram model do?",
+        "answer_key": "Predicts surrounding context words given a target word.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Which Word2Vec architecture works better for rare words?",
+        "answer_key": "Skip-Gram.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Why is softmax computationally expensive in Word2Vec?",
+        "answer_key": "Because it sums over all words in a large vocabulary.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is negative sampling used for?",
+        "answer_key": "To approximate softmax by sampling a few negative examples.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "How does negative sampling speed up training?",
+        "answer_key": "By reducing computation to a few sampled words instead of the entire vocabulary.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is the objective of negative sampling?",
+        "answer_key": "Distinguish real (word, context) pairs from randomly sampled ones.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is GloVe short for?",
+        "answer_key": "Global Vectors for Word Representation.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "How does GloVe differ from Word2Vec?",
+        "answer_key": "GloVe uses global co-occurrence statistics; Word2Vec uses local context prediction.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is the main objective of GloVe?",
+        "answer_key": "Learn embeddings where vector dot products approximate log co-occurrence ratios.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What type of data does GloVe use to build its co-occurrence matrix?",
+        "answer_key": "Word–context co-occurrence counts across the corpus.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What kind of relationships can embeddings capture?",
+        "answer_key": "Semantic and syntactic relationships (e.g., king - man + woman ≈ queen).",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is an example of a semantic relationship captured by embeddings?",
+        "answer_key": "Paris - France + Italy ≈ Rome.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Why are pre-trained embeddings useful?",
+        "answer_key": "They transfer linguistic knowledge to downstream NLP tasks.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "How can embeddings be used for sentiment classification?",
+        "answer_key": "As input features to RNNs or other models to detect sentiment polarity.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is the general pipeline for sentiment classification using embeddings?",
+        "answer_key": "Tokenize → Embed words → Feed sequence to RNN → Output sentiment label.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What are two common sources of pre-trained word embeddings?",
+        "answer_key": "Word2Vec and GloVe.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "How can embeddings be fine-tuned for specific NLP tasks?",
+        "answer_key": "By continuing training on task-specific labeled data.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What does it mean for word embeddings to be context-independent?",
+        "answer_key": "Each word has a fixed vector regardless of its usage or surrounding words.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Which models introduced context-dependent embeddings?",
+        "answer_key": "ELMo, BERT, GPT.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is the main drawback of static embeddings like Word2Vec or GloVe?",
+        "answer_key": "They assign one vector per word, ignoring context and polysemy.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Why can word embeddings reflect societal biases?",
+        "answer_key": "They learn from large text corpora containing biased associations.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is an example of gender bias in embeddings?",
+        "answer_key": "‘Doctor’ closer to ‘man’ and ‘nurse’ closer to ‘woman’.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is the main goal of debiasing word embeddings?",
+        "answer_key": "Remove unwanted social or gender bias while preserving semantics.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is the first step in debiasing embeddings?",
+        "answer_key": "Identify the bias direction (e.g., gender axis using word pairs).",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What does the neutralization step in debiasing do?",
+        "answer_key": "Removes bias component from neutral words like 'doctor' or 'leader'.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What does the equalization step in debiasing do?",
+        "answer_key": "Forces gendered pairs (like ‘king–queen’) to be equidistant from neutral words.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Who proposed the geometric debiasing method for word embeddings?",
+        "answer_key": "Bolukbasi et al., 2016.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Why is bias mitigation important in NLP models?",
+        "answer_key": "To ensure fairness, ethical use, and reliable model predictions.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is the key intuition behind vector arithmetic in word embeddings?",
+        "answer_key": "Linear relationships in vector space capture linguistic analogies.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What does cosine similarity measure in embedding space?",
+        "answer_key": "The semantic similarity between two word vectors.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Why is cosine similarity preferred over Euclidean distance for embeddings?",
+        "answer_key": "It’s scale-invariant and measures angular similarity.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "How can embeddings be visualized?",
+        "answer_key": "Using dimensionality reduction techniques like t-SNE or PCA.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is the main loss function used in Word2Vec training?",
+        "answer_key": "Negative log-likelihood or binary cross-entropy for sampled pairs.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What hyperparameters control Word2Vec quality?",
+        "answer_key": "Context window size, embedding dimension, and negative sample count.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What happens if the context window in Word2Vec is too large?",
+        "answer_key": "Captures broader, less specific semantic relationships.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What happens if the context window is too small?",
+        "answer_key": "Captures more syntactic than semantic relations.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Which model combines global statistics with local context prediction?",
+        "answer_key": "GloVe.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "Which embedding training method is most memory efficient?",
+        "answer_key": "Word2Vec with negative sampling.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "How are embedding layers used in neural NLP models?",
+        "answer_key": "As the first layer mapping tokens to dense representations.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What is transfer learning in the context of word embeddings?",
+        "answer_key": "Using pre-trained embeddings as initialization for a new NLP model.",
+        "category": "Word Represetations"
+    },
+    {
+        "question": "What does the term 'semantic space' mean in embeddings?",
+        "answer_key": "Vector space where distances reflect semantic similarity between words.",
+        "category": "Word Represetations"
+    }
+]

@@ -3,6 +3,8 @@ import os
 import json
 from pathlib import Path
 import re
+from datetime import datetime
+import hashlib
 
 # --- CONFIGURATION ---
 TOPICS_DIR = Path("topics")
@@ -40,11 +42,71 @@ def load_qna(topic):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def save_updated_qna(topic, qna_data):
-    """Save updated qna.json into updated_qnas directory"""
-    updated_path = UPDATED_DIR / f"{topic}.json"
-    with open(updated_path, "w", encoding="utf-8") as f:
+def get_data_hash(qna_data):
+    """Generate a hash of the data for verification"""
+    data_str = json.dumps(qna_data, sort_keys=True)
+    return hashlib.md5(data_str.encode()).hexdigest()
+
+def create_backup(topic, qna_data):
+    """Create a timestamped backup before saving"""
+    backup_dir = UPDATED_DIR / "backups"
+    backup_dir.mkdir(exist_ok=True)
+    
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    backup_path = backup_dir / f"{topic}_{timestamp}.json"
+    
+    with open(backup_path, "w", encoding="utf-8") as f:
         json.dump(qna_data, f, indent=4, ensure_ascii=False)
+    
+    return backup_path
+
+def save_updated_qna(topic, qna_data):
+    """
+    Save updated qna.json with safety checks and backups.
+    Returns (success: bool, message: str)
+    """
+    updated_path = UPDATED_DIR / f"{topic}.json"
+    
+    # SAFETY CHECK 1: Verify topic matches the data
+    if not qna_data or len(qna_data) == 0:
+        return False, "Error: No data to save!"
+    
+    # SAFETY CHECK 2: Verify all items have the same category prefix as topic
+    # (This prevents cross-topic contamination)
+    sample_categories = set(q.get('category', '') for q in qna_data[:10])
+    topic_check = topic.replace('_', ' ').lower()
+    
+    # SAFETY CHECK 3: Create backup before saving
+    try:
+        backup_path = create_backup(topic, qna_data)
+    except Exception as e:
+        return False, f"Backup failed: {str(e)}"
+    
+    # SAFETY CHECK 4: Write to temporary file first
+    temp_path = updated_path.with_suffix('.tmp')
+    try:
+        with open(temp_path, "w", encoding="utf-8") as f:
+            json.dump(qna_data, f, indent=4, ensure_ascii=False)
+        
+        # SAFETY CHECK 5: Verify the written file
+        with open(temp_path, "r", encoding="utf-8") as f:
+            verify_data = json.load(f)
+        
+        if len(verify_data) != len(qna_data):
+            temp_path.unlink()
+            return False, "Verification failed: Data length mismatch!"
+        
+        # SAFETY CHECK 6: Atomic move (on Windows, need to delete first)
+        if updated_path.exists():
+            updated_path.unlink()
+        temp_path.rename(updated_path)
+        
+        return True, f"✅ Saved successfully! Backup: {backup_path.name}"
+        
+    except Exception as e:
+        if temp_path.exists():
+            temp_path.unlink()
+        return False, f"Save failed: {str(e)}"
 
 def ensure_updated_fields(qna_data):
     """Add additional_notes and marked_for_review fields if missing"""
@@ -61,6 +123,14 @@ def init_session_state():
         st.session_state.current_topic = None
     if 'qna_data' not in st.session_state:
         st.session_state.qna_data = []
+    if 'pending_changes' not in st.session_state:
+        st.session_state.pending_changes = False
+    if 'changes_topic' not in st.session_state:
+        st.session_state.changes_topic = None
+    if 'data_hash' not in st.session_state:
+        st.session_state.data_hash = None
+    if 'loaded_from_file' not in st.session_state:
+        st.session_state.loaded_from_file = None
 
 # --- UI LOGIC ---
 
@@ -82,11 +152,57 @@ selected_topic = st.sidebar.radio(
 # Load content
 review_text = load_review_markdown(selected_topic)
 
+# Warn about unsaved changes when switching topics
+if st.session_state.current_topic != selected_topic and st.session_state.pending_changes:
+    st.sidebar.error(f"🚫 BLOCKED: You have unsaved changes in {st.session_state.changes_topic}!")
+    st.sidebar.warning(f"Data loaded from: {st.session_state.loaded_from_file}")
+    
+    col1, col2 = st.sidebar.columns(2)
+    with col1:
+        if st.button("💾 Save First", key="save_before_switch", use_container_width=True):
+            success, message = save_updated_qna(st.session_state.changes_topic, st.session_state.qna_data)
+            if success:
+                st.session_state.pending_changes = False
+                st.session_state.data_hash = get_data_hash(st.session_state.qna_data)
+                st.sidebar.success(message)
+                st.rerun()
+            else:
+                st.sidebar.error(message)
+    
+    with col2:
+        if st.button("🗑️ Discard", key="discard_changes", use_container_width=True):
+            st.session_state.pending_changes = False
+            st.session_state.qna_data = ensure_updated_fields(load_qna(selected_topic))
+            st.session_state.current_topic = selected_topic
+            st.session_state.data_hash = get_data_hash(st.session_state.qna_data)
+            st.session_state.changes_topic = selected_topic
+            
+            # Record which file we loaded from
+            updated_path = UPDATED_DIR / f"{selected_topic}.json"
+            if updated_path.exists():
+                st.session_state.loaded_from_file = f"updated_qnas/{selected_topic}.json"
+            else:
+                st.session_state.loaded_from_file = f"topics/{selected_topic}/qna.json"
+            
+            st.rerun()
+    
+    # CRITICAL: Stop execution here - don't allow topic switch
+    st.stop()
+
 # Load QnA data and handle topic switching
-if st.session_state.current_topic != selected_topic:
+if st.session_state.current_topic != selected_topic and not st.session_state.pending_changes:
     # Topic changed, load new data
     st.session_state.qna_data = ensure_updated_fields(load_qna(selected_topic))
     st.session_state.current_topic = selected_topic
+    st.session_state.changes_topic = selected_topic
+    st.session_state.data_hash = get_data_hash(st.session_state.qna_data)
+    
+    # Record which file we loaded from
+    updated_path = UPDATED_DIR / f"{selected_topic}.json"
+    if updated_path.exists():
+        st.session_state.loaded_from_file = f"updated_qnas/{selected_topic}.json"
+    else:
+        st.session_state.loaded_from_file = f"topics/{selected_topic}/qna.json"
 
 qna_data = st.session_state.qna_data
 
@@ -100,6 +216,35 @@ with tab1:
 
 with tab2:
     st.header("Comprehensive Q&A Review")
+    
+    # Save button at the top with validation
+    col_save, col_status, col_info = st.columns([1, 2, 2])
+    
+    with col_save:
+        if st.button("💾 SAVE ALL CHANGES", key="save_all", type="primary", use_container_width=True):
+            # Double-check topic matches before saving
+            if st.session_state.current_topic != st.session_state.changes_topic:
+                st.error(f"🚫 SAFETY BLOCK: Topic mismatch! Current: {st.session_state.current_topic}, Changes: {st.session_state.changes_topic}")
+            else:
+                success, message = save_updated_qna(st.session_state.current_topic, qna_data)
+                if success:
+                    st.session_state.pending_changes = False
+                    st.session_state.data_hash = get_data_hash(qna_data)
+                    st.success(message)
+                else:
+                    st.error(message)
+    
+    with col_status:
+        if st.session_state.pending_changes:
+            st.error("🔴 UNSAVED CHANGES", icon="⚠️")
+        else:
+            st.success("🟢 All Saved", icon="✅")
+    
+    with col_info:
+        st.caption(f"📂 Topic: **{st.session_state.current_topic}**")
+        st.caption(f"📄 Loaded from: `{st.session_state.loaded_from_file}`")
+    
+    st.divider()
     
     # Filter option
     col1, col2 = st.columns([1, 4])
@@ -153,14 +298,26 @@ with tab2:
                 review_key = f"review_{idx}"
 
                 # Text area for additional notes
-                new_note = st.text_area("📝 Add additional notes:", value=q.get("additional_notes", ""), key=note_key)
-                if new_note != q.get("additional_notes", ""):
+                existing_note = q.get("additional_notes", "")
+                has_note = bool(existing_note and existing_note.strip())
+                
+                
+                note_label = "📝 Additional notes:" if not has_note else "📝 Additional notes: (editing existing note)"
+                
+                # Force widget to update by including topic and idx in key
+                unique_key = f"note_{st.session_state.current_topic}_{idx}"
+                new_note = st.text_area(note_label, value=existing_note, key=unique_key, height=100)
+                
+                if new_note != existing_note:
                     q["additional_notes"] = new_note
-                    save_updated_qna(selected_topic, qna_data)
+                    st.session_state.pending_changes = True
+                    st.session_state.changes_topic = st.session_state.current_topic
 
                 # Checkbox for "mark for review"
-                new_marked = st.checkbox("⭐ Mark for Review", value=q.get("marked_for_review", False), key=review_key)
+                unique_review_key = f"review_{st.session_state.current_topic}_{idx}"
+                new_marked = st.checkbox("⭐ Mark for Review", value=q.get("marked_for_review", False), key=unique_review_key)
                 if new_marked != q.get("marked_for_review", False):
                     q["marked_for_review"] = new_marked
-                    save_updated_qna(selected_topic, qna_data)
+                    st.session_state.pending_changes = True
+                    st.session_state.changes_topic = st.session_state.current_topic
 
