@@ -1,0 +1,747 @@
+[
+    {
+        "question": "What is the main goal of autocorrect systems in NLP?",
+        "answer_key": "To correct misspelled words by finding the closest valid match.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What metric is commonly used to measure similarity between words in autocorrect?",
+        "answer_key": "Edit distance or Levenshtein distance.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What are the three operations used in Levenshtein distance?",
+        "answer_key": "Insertion, deletion, and substitution.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "How is edit distance computed efficiently?",
+        "answer_key": "Using dynamic programming.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the time complexity of the dynamic programming approach for edit distance?",
+        "answer_key": "O(m × n), where m and n are word lengths.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What does a smaller edit distance between two words imply?",
+        "answer_key": "Higher similarity between the words.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "Why is dynamic programming preferred for edit distance calculation?",
+        "answer_key": "It avoids redundant computations by storing intermediate results.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "How can autocorrect systems incorporate probabilistic reasoning?",
+        "answer_key": "By combining edit distance with prior word frequency probabilities.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the Bayesian formula used in probabilistic autocorrect?",
+        "answer_key": "P(correct_word | observed_word) ∝ P(observed_word | correct_word) × P(correct_word).",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the role of the confusion matrix in autocorrect?",
+        "answer_key": "Models common typing or spelling error likelihoods.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What does dynamic programming base case represent in edit distance computation?",
+        "answer_key": "Transforming empty string to prefix or vice versa.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the core idea behind machine translation using word vectors?",
+        "answer_key": "Aligning semantic vector spaces between languages.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What assumption does word vector alignment rely on for translation?",
+        "answer_key": "Similar words across languages have similar spatial structures.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the mathematical objective of learning a rotation matrix for translation?",
+        "answer_key": "Minimize ||W × xᵢ - yᵢ||² between corresponding word pairs.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "Why is the rotation matrix often constrained to be orthogonal?",
+        "answer_key": "To preserve distances and geometric relationships.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "Which mathematical technique is used to find the optimal rotation matrix?",
+        "answer_key": "Procrustes alignment using Singular Value Decomposition (SVD).",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What are cross-lingual embeddings used for?",
+        "answer_key": "Mapping multiple languages into a shared semantic space.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "Give one advantage of unsupervised translation using word embeddings.",
+        "answer_key": "Can align languages without parallel corpora.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What are bilingual dictionaries useful for in word vector translation?",
+        "answer_key": "Supervision during alignment or evaluation.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the goal of nearest neighbor search in NLP?",
+        "answer_key": "To find most semantically similar words, phrases, or documents.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "Which distance metrics are typically used in nearest neighbor retrieval?",
+        "answer_key": "Cosine similarity or Euclidean distance.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the main drawback of brute-force nearest neighbor search?",
+        "answer_key": "It is computationally expensive for large datasets.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is Locality Sensitive Hashing (LSH) used for?",
+        "answer_key": "To efficiently find approximate nearest neighbors.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the principle behind LSH?",
+        "answer_key": "Similar items are hashed to the same buckets with high probability.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "How does LSH achieve dimensionality reduction?",
+        "answer_key": "By projecting data onto random hyperplanes.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the advantage of approximate nearest neighbor (ANN) methods?",
+        "answer_key": "They trade small accuracy loss for faster search speed.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "Name one popular library for ANN search.",
+        "answer_key": "FAISS or Annoy.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the time complexity improvement of ANN over brute-force search?",
+        "answer_key": "From O(N) to approximately O(log N).",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What does cosine similarity measure in vector space models?",
+        "answer_key": "The angle-based similarity between two vectors.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the range of cosine similarity values?",
+        "answer_key": "Between -1 and 1.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "Why is cosine similarity preferred over Euclidean distance in NLP?",
+        "answer_key": "It focuses on direction, not magnitude, of vectors.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What probabilistic principle underlies LSH design?",
+        "answer_key": "High collision probability for similar vectors.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the main trade-off in LSH-based systems?",
+        "answer_key": "Speed versus accuracy of retrieved neighbors.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What are approximate nearest neighbors useful for in NLP?",
+        "answer_key": "Semantic search, clustering, and recommendation tasks.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "How is dynamic programming used beyond autocorrect in NLP?",
+        "answer_key": "For sequence alignment and decoding tasks like POS tagging.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the intuition behind using embeddings for translation?",
+        "answer_key": "Languages share underlying semantic relationships.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is an example of a probabilistic component in translation systems?",
+        "answer_key": "Modeling word alignment probabilities.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "Why is approximate inference important in large-scale NLP systems?",
+        "answer_key": "Exact computation is infeasible for huge vocabularies.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What does the term 'semantic similarity retrieval' refer to?",
+        "answer_key": "Finding items with related meaning based on vector closeness.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What kind of data structures are often used for nearest neighbor indexing?",
+        "answer_key": "Trees, hash tables, or graph-based indices.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the main challenge in aligning word vectors across languages?",
+        "answer_key": "Ensuring consistent geometric relationships across vocabularies.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "How can embeddings help improve machine translation performance?",
+        "answer_key": "By capturing shared semantic features across languages.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What kind of errors does autocorrect primarily handle?",
+        "answer_key": "Typographical or phonetic spelling errors.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "How does probabilistic autocorrect handle ambiguity?",
+        "answer_key": "By ranking suggestions using frequency-based priors.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is one limitation of LSH for NLP applications?",
+        "answer_key": "May produce false positives due to hash collisions.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What property makes rotation matrices suitable for translation alignment?",
+        "answer_key": "They preserve vector norms and pairwise distances.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "How does probabilistic reasoning combine with vector methods in NLP?",
+        "answer_key": "By weighting similarity scores with prior probabilities.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What are real-world NLP tasks that use approximate similarity methods?",
+        "answer_key": "Semantic search, question answering, and information retrieval.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "Why are approximate methods essential in large embedding spaces?",
+        "answer_key": "They reduce computation time while maintaining useful accuracy.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the end-to-end pipeline for autocorrect using probability and distance?",
+        "answer_key": "Generate candidates → compute edit distance → rank by word probability.",
+        "category": "Applied Probabilistic Techniques"
+    },
+    {
+        "question": "What is the main goal of probabilistic language modeling?",
+        "answer_key": "To estimate the probability distribution over sequences of words.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What assumption underlies an N-gram model?",
+        "answer_key": "Markov assumption — a word depends only on the previous n−1 words.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Write the general formula for an N-gram language model.",
+        "answer_key": "P(w₁, …, wₙ) ≈ ∏ P(wᵢ | wᵢ₋₁, …, wᵢ₋ₙ₊₁).",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the unigram model assumption?",
+        "answer_key": "Each word is independent of all others.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "How does a bigram model differ from a trigram model?",
+        "answer_key": "Bigram uses one preceding word; trigram uses two.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Why do we add <s> and </s> tokens in N-gram models?",
+        "answer_key": "To represent sentence start and end boundaries.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the key problem with higher-order N-grams?",
+        "answer_key": "Data sparsity and increased computational cost.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is Laplace smoothing used for in N-gram models?",
+        "answer_key": "To handle zero probabilities by adding small counts.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Define perplexity in language modeling.",
+        "answer_key": "A measure of how well a model predicts unseen data.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What does lower perplexity indicate?",
+        "answer_key": "Better predictive performance of the model.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Why is the Markov assumption important in N-gram models?",
+        "answer_key": "It simplifies computation by limiting context dependency.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is Good-Turing smoothing used for?",
+        "answer_key": "Adjusting probabilities for unseen N-grams.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What does Kneser-Ney smoothing improve upon?",
+        "answer_key": "Better estimation of lower-order N-grams for rare events.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the main limitation of N-gram models?",
+        "answer_key": "They fail to capture long-range dependencies.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "State Bayes’ theorem used in Naive Bayes classification.",
+        "answer_key": "P(Class | Words) ∝ P(Words | Class) × P(Class).",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What does the term 'naive' in Naive Bayes signify?",
+        "answer_key": "Assumes conditional independence among features.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the role of the prior probability in Naive Bayes?",
+        "answer_key": "Represents the base likelihood of each class before seeing data.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is Laplacian smoothing in Naive Bayes used for?",
+        "answer_key": "Prevents zero probabilities for unseen words.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What are common variants of Naive Bayes used in NLP?",
+        "answer_key": "Multinomial, Bernoulli, and Gaussian Naive Bayes.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Which Naive Bayes model is best for text classification?",
+        "answer_key": "Multinomial Naive Bayes.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Why is Naive Bayes efficient for high-dimensional text data?",
+        "answer_key": "Because of its simple independence assumption and low parameter count.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is a limitation of Naive Bayes in sentiment analysis?",
+        "answer_key": "Fails to model dependencies and word order.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the key objective in Part-of-Speech tagging?",
+        "answer_key": "To assign grammatical tags to each word in a sentence.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What type of model is used in POS tagging under probabilistic approaches?",
+        "answer_key": "Hidden Markov Model (HMM).",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What are the hidden and observed variables in HMM for POS tagging?",
+        "answer_key": "Hidden states are POS tags; observations are words.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What are the three main parameters of an HMM?",
+        "answer_key": "Transition, emission, and initial probabilities.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the Markov property in the context of HMMs?",
+        "answer_key": "Current state depends only on the previous state.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What problem does the Viterbi algorithm solve?",
+        "answer_key": "Finds the most probable sequence of hidden states (tags).",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What kind of algorithm is Viterbi?",
+        "answer_key": "Dynamic programming algorithm for sequence decoding.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Why is HMM suitable for sequential data like text?",
+        "answer_key": "It captures transition probabilities between states.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is an emission probability in HMM?",
+        "answer_key": "The likelihood of observing a word given a tag.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is a transition probability in HMM?",
+        "answer_key": "The likelihood of moving from one tag to another.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Why is smoothing important in probabilistic models?",
+        "answer_key": "To handle unseen or rare events gracefully.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the complexity of the Viterbi algorithm?",
+        "answer_key": "O(N²T), where N = states, T = sequence length.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the difference between generative and discriminative models?",
+        "answer_key": "Generative models learn joint distribution; discriminative learn conditional probability.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Is Naive Bayes a generative or discriminative model?",
+        "answer_key": "Generative.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What metric is typically used to evaluate language models?",
+        "answer_key": "Perplexity.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Why is data sparsity a major issue in N-gram modeling?",
+        "answer_key": "Most possible word sequences never appear in training data.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the primary goal of Laplace smoothing?",
+        "answer_key": "To ensure no probability becomes zero.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "In POS tagging, what does decoding mean?",
+        "answer_key": "Finding the most likely tag sequence for a word sequence.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the significance of transition matrix in HMM?",
+        "answer_key": "Defines probabilities of tag transitions.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What type of probability distribution do N-gram models estimate?",
+        "answer_key": "Conditional probability distribution of words given context.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Why does Naive Bayes often perform well despite its independence assumption?",
+        "answer_key": "Because word dependencies often cancel out in ratio comparisons.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the main advantage of probabilistic models in NLP?",
+        "answer_key": "They handle uncertainty and variability in language effectively.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What are some real-world applications of Naive Bayes in NLP?",
+        "answer_key": "Spam detection, sentiment analysis, and text categorization.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What does smoothing achieve in probabilistic models?",
+        "answer_key": "Redistributes probability mass to unseen events.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What role do initial probabilities play in HMM?",
+        "answer_key": "They define likelihoods of starting in each tag state.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "Why is perplexity a better metric than accuracy for language models?",
+        "answer_key": "It measures overall uncertainty over word distributions.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the main limitation of first-order Markov models?",
+        "answer_key": "Cannot capture long-range dependencies beyond one step.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What does the normalization step ensure in probability models?",
+        "answer_key": "That total probabilities sum to one.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "How can higher-order N-gram models be made feasible?",
+        "answer_key": "Using smoothing and backoff techniques.",
+        "category": "Probabilistic Modelling"
+    },
+    {
+        "question": "What is the main goal of text preprocessing in NLP?",
+        "answer_key": "To clean and normalize raw text for consistent representation.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What are stopwords, and why are they removed?",
+        "answer_key": "Common non-informative words removed to reduce noise.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is the difference between stemming and lemmatization?",
+        "answer_key": "Stemming chops suffixes; lemmatization uses linguistic rules.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "Which algorithm is commonly used for stemming?",
+        "answer_key": "Porter Stemmer.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "Why is lemmatization preferred over stemming in some cases?",
+        "answer_key": "It preserves valid dictionary forms of words.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is tokenization in NLP?",
+        "answer_key": "Splitting text into words, subwords, or sentences.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What does text normalization involve?",
+        "answer_key": "Lowercasing, removing punctuation, and expanding contractions.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is the main drawback of using a Bag-of-Words model?",
+        "answer_key": "Ignores word order and semantic meaning.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "How does TF-IDF improve upon Bag-of-Words?",
+        "answer_key": "By weighting words based on importance across documents.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is the formula for TF-IDF?",
+        "answer_key": "TF × log(N / DF).",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is cosine similarity used for in NLP?",
+        "answer_key": "Measuring similarity between vector representations.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What does a cosine similarity score of 1 indicate?",
+        "answer_key": "Identical direction or perfectly similar vectors.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is a limitation of TF-IDF vectors?",
+        "answer_key": "High dimensionality and sparsity.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is the key advantage of word embeddings over BoW or TF-IDF?",
+        "answer_key": "Capture semantic relationships in dense vector form.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is the main idea behind the CBoW model?",
+        "answer_key": "Predict target word from surrounding context words.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What does the Skip-Gram model do?",
+        "answer_key": "Predict surrounding context words given a target word.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "When is Skip-Gram preferred over CBoW?",
+        "answer_key": "For learning rare word representations.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is negative sampling used for?",
+        "answer_key": "Efficiently training embeddings by updating few weights per step.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "Which algorithm implements both CBoW and Skip-Gram models?",
+        "answer_key": "Word2Vec.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What analogy property does Word2Vec capture?",
+        "answer_key": "Linear relationships like king - man + woman ≈ queen.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is GloVe based on?",
+        "answer_key": "Global word co-occurrence statistics.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "How does GloVe differ from Word2Vec?",
+        "answer_key": "Combines global co-occurrence with local context learning.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is FastText’s key innovation?",
+        "answer_key": "Uses character n-grams for subword information.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "Why is FastText good for morphologically rich languages?",
+        "answer_key": "It models word composition via subword embeddings.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What are self-supervised tasks in word embedding training?",
+        "answer_key": "Tasks that predict context or masked tokens without labels.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "Give an example of a self-supervised task for embedding learning.",
+        "answer_key": "Predicting masked words as in BERT’s masked language modeling.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is intrinsic evaluation of embeddings?",
+        "answer_key": "Testing similarity or analogy tasks within embeddings.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is extrinsic evaluation of embeddings?",
+        "answer_key": "Testing embeddings on downstream tasks like sentiment analysis.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "How do contextual embeddings differ from static embeddings?",
+        "answer_key": "Contextual embeddings change based on sentence context.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "Name two examples of contextual embedding models.",
+        "answer_key": "BERT and ELMo.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is the main limitation of static embeddings like Word2Vec?",
+        "answer_key": "They assign one vector per word regardless of context.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is a key benefit of using dense embeddings?",
+        "answer_key": "Compact representation capturing semantic and syntactic meaning.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is an embedding space?",
+        "answer_key": "A continuous vector space where semantic similarity is geometric closeness.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "How can cosine similarity help in word analogy evaluation?",
+        "answer_key": "By measuring geometric closeness between relation vectors.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is subword information and why is it useful?",
+        "answer_key": "Character-level data that helps handle rare or unseen words.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "Why is preprocessing essential before building word embeddings?",
+        "answer_key": "To remove noise and standardize text for consistent vector learning.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "How does tokenization choice affect downstream models?",
+        "answer_key": "Different token granularity impacts vocabulary and semantic capture.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is the purpose of embedding evaluation benchmarks?",
+        "answer_key": "To compare quality and generalization of learned representations.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What type of relationship do word embeddings capture geometrically?",
+        "answer_key": "Semantic similarity and analogy relationships.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What problem does negative sampling solve in Word2Vec training?",
+        "answer_key": "Computational inefficiency of softmax over large vocabularies.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is the intuition behind self-supervised learning in NLP?",
+        "answer_key": "Learning representations from patterns within unlabeled data.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "How does lowercasing impact vector representations?",
+        "answer_key": "Reduces vocabulary size and normalizes case variations.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is a potential drawback of removing stopwords blindly?",
+        "answer_key": "Loss of contextual meaning in certain tasks.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What is the role of context window size in Word2Vec?",
+        "answer_key": "Determines how many surrounding words influence a target word.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "Why are dense embeddings preferred for deep learning models?",
+        "answer_key": "They are compact and differentiable for gradient-based learning.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What does a smaller cosine distance between two word vectors imply?",
+        "answer_key": "Greater semantic similarity between words.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "How can embeddings help in text clustering?",
+        "answer_key": "By enabling semantic grouping in vector space.",
+        "category": "Text Representation And Preprocessing"
+    },
+    {
+        "question": "What happens if text is not normalized before vectorization?",
+        "answer_key": "Inconsistent tokens lead to data sparsity and poor generalization.",
+        "category": "Text Representation And Preprocessing"
+    }
+]
