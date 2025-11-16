@@ -1,0 +1,912 @@
+[
+    {
+        "question": "What is the main motivation behind introducing attention mechanisms in NLP?",
+        "answer_key": "To capture long-range dependencies without recurrence",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the key idea of the attention mechanism?",
+        "answer_key": "Compute weighted importance of all input tokens for each output token",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What are the components of the scaled dot-product attention?",
+        "answer_key": "Query (Q), Key (K), and Value (V)",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "Why do we divide by sqrt(d_k) in scaled dot-product attention?",
+        "answer_key": "To prevent large dot products from saturating softmax",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is self-attention?",
+        "answer_key": "Each token attends to all tokens in the same sequence",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is cross-attention?",
+        "answer_key": "The decoder attends to encoder outputs in sequence-to-sequence models",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is masked self-attention used for?",
+        "answer_key": "To prevent future token information leakage in autoregressive models",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the purpose of multi-head attention?",
+        "answer_key": "To learn different contextual relationships in parallel",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "How is attention different from recurrence in RNNs?",
+        "answer_key": "Attention processes all tokens simultaneously; RNNs are sequential",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "Why are transformers faster to train than RNNs?",
+        "answer_key": "They allow full parallelization of input sequences",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What problem of RNNs does the transformer architecture solve?",
+        "answer_key": "Difficulty modeling long-range dependencies and lack of parallelism",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is positional encoding in transformers?",
+        "answer_key": "Adds order information to tokens since attention is position-invariant",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "Why does the transformer need positional encoding?",
+        "answer_key": "Attention lacks inherent sense of sequence order",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What types of positional encodings exist?",
+        "answer_key": "Sinusoidal and learned embeddings",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the difference between self-attention in encoder and decoder?",
+        "answer_key": "Decoder self-attention is masked; encoder self-attention is bidirectional",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What are the main sub-layers in a Transformer encoder block?",
+        "answer_key": "Multi-head attention and feed-forward network with residual connections",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What are the main sub-layers in a Transformer decoder block?",
+        "answer_key": "Masked self-attention, cross-attention, and feed-forward layers",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the primary benefit of multi-head attention over single-head?",
+        "answer_key": "Captures multiple types of relationships in different subspaces",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "How does self-attention compute token dependencies?",
+        "answer_key": "By calculating attention weights via QK^T scaled dot product",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the intuition behind the term 'query' in attention?",
+        "answer_key": "Represents the current token looking for relevant information in the sequence",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What makes transformers more parallelizable than RNNs?",
+        "answer_key": "All positions in a sequence can attend to all others simultaneously",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the key architectural difference between RNNs and Transformers?",
+        "answer_key": "RNNs use recurrence, Transformers use attention",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the purpose of residual connections in transformers?",
+        "answer_key": "Stabilize training and preserve gradient flow",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "How is the softmax function used in attention computation?",
+        "answer_key": "To normalize attention scores into probabilities",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What are some limitations of RNN-based sequence models?",
+        "answer_key": "Vanishing gradients, slow training, limited context window",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What are some advantages of attention-based models?",
+        "answer_key": "Parallel computation, global context, interpretability",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "Which paper introduced the Transformer architecture?",
+        "answer_key": "Vaswani et al., 'Attention is All You Need' (2017)",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What does GPT stand for?",
+        "answer_key": "Generative Pre-trained Transformer",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the main architecture type of GPT?",
+        "answer_key": "Decoder-only transformer",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What objective does GPT use for training?",
+        "answer_key": "Autoregressive next-token prediction",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What does BERT stand for?",
+        "answer_key": "Bidirectional Encoder Representations from Transformers",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What training objective does BERT use?",
+        "answer_key": "Masked language modeling and next sentence prediction",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What type of attention does BERT use?",
+        "answer_key": "Bidirectional self-attention",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What does T5 stand for?",
+        "answer_key": "Text-to-Text Transfer Transformer",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the main concept behind T5?",
+        "answer_key": "Unifies all NLP tasks as text-to-text transformations",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What kind of architecture does T5 use?",
+        "answer_key": "Full encoder-decoder transformer",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "How do GPT and BERT differ in directionality of attention?",
+        "answer_key": "GPT is unidirectional; BERT is bidirectional",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "Why are transformers preferred for long-context modeling?",
+        "answer_key": "They allow direct token-to-token interaction without sequential bottleneck",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What are some extensions of the transformer model?",
+        "answer_key": "T5, BART, DeBERTa, XLNet",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is masked attention primarily used for?",
+        "answer_key": "Causal modeling to ensure left-to-right prediction",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the computational complexity of self-attention?",
+        "answer_key": "O(n²) due to pairwise token interactions",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What mechanism allows transformers to generalize across sequence lengths?",
+        "answer_key": "Position-independent self-attention and positional embeddings",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What problem does attention address in encoder-decoder models?",
+        "answer_key": "Information bottleneck between encoder and decoder",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "Why are multi-head attentions concatenated after processing?",
+        "answer_key": "To merge diverse contextual perspectives into one representation",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "How do transformers maintain context between tokens without recurrence?",
+        "answer_key": "Through self-attention using query-key-value matching",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the primary limitation of self-attention?",
+        "answer_key": "Quadratic memory and computation cost with sequence length",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What key idea led to replacing RNNs with attention-based architectures?",
+        "answer_key": "Attention allows parallel global dependency modeling",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "How does attention enhance interpretability in NLP models?",
+        "answer_key": "Provides weight distributions showing focus on specific tokens",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "Which Transformer component is responsible for non-linear transformations?",
+        "answer_key": "Position-wise feed-forward network",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "Why is layer normalization important in transformers?",
+        "answer_key": "Stabilizes and accelerates training by normalizing activations",
+        "category": "Attention And Transformer"
+    },
+    {
+        "question": "What is the purpose of fine-tuning in NLP models?",
+        "answer_key": "Adapt pre-trained models to specific downstream tasks",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why are pre-trained language models fine-tuned instead of trained from scratch?",
+        "answer_key": "To leverage general linguistic knowledge and reduce data requirements",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is a Siamese network?",
+        "answer_key": "Twin networks with shared weights that compare input embeddings",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "How does a Siamese network compute similarity between two sentences?",
+        "answer_key": "By comparing their encoded embeddings using a distance metric",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What tasks commonly use Siamese architectures?",
+        "answer_key": "Semantic textual similarity, paraphrase detection, duplicate question detection",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the role of shared weights in a Siamese network?",
+        "answer_key": "Ensure both inputs are mapped to the same representation space",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the goal of triplet loss in embedding learning?",
+        "answer_key": "Bring similar items closer and dissimilar items farther in embedding space",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What are the components of a triplet in triplet loss?",
+        "answer_key": "Anchor, positive, and negative samples",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the difference between mean negative and closest negative strategies?",
+        "answer_key": "Mean negative averages negatives; closest focuses on hardest negative",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why is choosing the right negative example important in triplet loss?",
+        "answer_key": "It influences convergence speed and embedding separation",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What kind of tasks use triplet loss for training?",
+        "answer_key": "Sentence embedding, face recognition, semantic similarity",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is Masked Language Modeling (MLM)?",
+        "answer_key": "Predict masked words using bidirectional context in text",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Which model popularized Masked Language Modeling?",
+        "answer_key": "BERT (Bidirectional Encoder Representations from Transformers)",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why is MLM effective for contextual learning?",
+        "answer_key": "Encourages understanding of both left and right context",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is Multi-Mask Language Modeling (MMLM)?",
+        "answer_key": "Extends MLM by masking multiple spans for richer contextual training",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "How does MMLM differ from standard MLM?",
+        "answer_key": "Predicts multiple masked tokens instead of isolated ones",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the benefit of multi-mask modeling?",
+        "answer_key": "Improves sentence-level reasoning and context robustness",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is gradual unfreezing in fine-tuning?",
+        "answer_key": "Progressively unfreezes model layers during training",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why is gradual unfreezing useful?",
+        "answer_key": "Prevents catastrophic forgetting of pre-trained knowledge",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is catastrophic forgetting?",
+        "answer_key": "Loss of general pre-trained knowledge during fine-tuning",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "How does gradual unfreezing reduce overfitting?",
+        "answer_key": "Trains shallow layers first before updating deeper ones",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What are adapter layers in NLP models?",
+        "answer_key": "Small trainable modules inserted between frozen layers",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why are adapter layers used?",
+        "answer_key": "Enable efficient fine-tuning with minimal parameter updates",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "How do adapter layers help in multi-task learning?",
+        "answer_key": "Each task gets its own adapter without retraining the full model",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is AdapterFusion?",
+        "answer_key": "A method to combine knowledge from multiple trained adapters",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is LoRA (Low-Rank Adaptation)?",
+        "answer_key": "A fine-tuning method injecting low-rank updates into attention weights",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why are adapter-based methods memory efficient?",
+        "answer_key": "Only small adapter parameters are trained, keeping the base model frozen",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What does GLUE stand for?",
+        "answer_key": "General Language Understanding Evaluation",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the purpose of the GLUE benchmark?",
+        "answer_key": "Evaluate generalization of NLP models across multiple language tasks",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "How many core tasks are included in GLUE?",
+        "answer_key": "Nine benchmark tasks",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What type of evaluation tasks are in GLUE?",
+        "answer_key": "Classification, entailment, and semantic similarity",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Give examples of GLUE tasks related to sentiment or paraphrase detection.",
+        "answer_key": "SST-2, MRPC, QQP",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Which GLUE task evaluates grammatical correctness?",
+        "answer_key": "CoLA (Corpus of Linguistic Acceptability)",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Which GLUE task evaluates semantic similarity?",
+        "answer_key": "STS-B (Semantic Textual Similarity Benchmark)",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What metric does GLUE use for regression tasks like STS-B?",
+        "answer_key": "Pearson or Spearman correlation",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is SuperGLUE?",
+        "answer_key": "A more challenging successor to GLUE with advanced reasoning tasks",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why was SuperGLUE introduced?",
+        "answer_key": "To push beyond GLUE’s near-saturated performance",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the main difference between GLUE and SuperGLUE?",
+        "answer_key": "SuperGLUE includes harder, multi-sentence reasoning tasks",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What types of fine-tuning strategies reduce overfitting in small datasets?",
+        "answer_key": "Gradual unfreezing, layer freezing, and adapter tuning",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "How can fine-tuning be made more efficient for large models?",
+        "answer_key": "Using adapter layers, LoRA, or prefix-tuning",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the goal of representation learning in NLP?",
+        "answer_key": "To encode semantic and syntactic meaning into vector spaces",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why are sentence embeddings important?",
+        "answer_key": "Enable similarity comparison and retrieval in semantic space",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Which loss function is commonly used for similarity learning?",
+        "answer_key": "Contrastive or triplet loss",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is fine-tuning sensitivity?",
+        "answer_key": "Performance dependence on small hyperparameter changes",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why is evaluation across multiple tasks important?",
+        "answer_key": "Ensures model generalization and linguistic competence",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What metric is most commonly used for classification tasks in GLUE?",
+        "answer_key": "Accuracy or F1 score",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is domain adaptation in fine-tuning?",
+        "answer_key": "Adjusting a model to perform better in a specific domain",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "How do Siamese networks relate to sentence embeddings?",
+        "answer_key": "They produce comparable embeddings for semantically similar inputs",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "Why is representation quality critical in transfer learning?",
+        "answer_key": "It determines downstream performance and generalization",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What does gradual unfreezing control during training?",
+        "answer_key": "The order in which pre-trained layers are fine-tuned",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the general workflow of fine-tuning?",
+        "answer_key": "Add task-specific head, freeze base layers, gradually unfreeze and train",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the key objective of the GLUE benchmark?",
+        "answer_key": "Measure linguistic, semantic, and reasoning capability in NLP systems",
+        "category": "Finetuning Representation Evalution"
+    },
+    {
+        "question": "What is the main limitation of n-gram models in sequence modeling?",
+        "answer_key": "Fixed context window and data sparsity",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "How do neural sequence models overcome the limitations of n-gram models?",
+        "answer_key": "Learn continuous representations with long-range dependencies",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is the key idea behind Recurrent Neural Networks (RNNs)?",
+        "answer_key": "Maintain hidden state carrying information across time steps",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What causes vanishing or exploding gradients in RNNs?",
+        "answer_key": "Repeated multiplication of weights through timesteps",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What architectural change in LSTMs helps mitigate vanishing gradients?",
+        "answer_key": "Use of gating mechanisms and a constant error carousel",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What are the three main gates in an LSTM cell?",
+        "answer_key": "Forget gate, input gate, output gate",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "How do GRUs differ from LSTMs?",
+        "answer_key": "Combine forget and input gates into a single update gate",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is the benefit of using Bi-Directional RNNs?",
+        "answer_key": "Access to both past and future context for each token",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What advantage do Deep RNNs have over shallow RNNs?",
+        "answer_key": "Capture hierarchical temporal representations",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "Why do RNNs struggle with very long sequences?",
+        "answer_key": "Information fades or explodes through many time steps",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "How do attention models differ from sequence (RNN) models?",
+        "answer_key": "Attention allows direct access to all tokens instead of relying on recurrence",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is the major computational drawback of RNN-based sequence models?",
+        "answer_key": "Sequential processing prevents parallelization",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is the hidden state in an RNN responsible for?",
+        "answer_key": "Storing temporal information from previous steps",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is the intuition behind using a forget gate in LSTM?",
+        "answer_key": "Decide which past information to discard",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "How does gradient clipping help RNN training?",
+        "answer_key": "Prevents exploding gradients by capping gradient magnitude",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "Why is named entity recognition considered a sequence modeling task?",
+        "answer_key": "Each token’s label depends on contextual tokens",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "How does a Bi-LSTM improve Named Entity Recognition (NER)?",
+        "answer_key": "Leverages both preceding and following context for tagging",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What role does a CRF layer play on top of Bi-LSTM in NER?",
+        "answer_key": "Ensures label sequence consistency",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is the main trade-off between RNNs and attention-based models?",
+        "answer_key": "RNNs handle temporal order naturally, attention offers parallelism and global context",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "In what scenarios might RNNs still outperform transformers?",
+        "answer_key": "When dealing with very small datasets or streaming inputs",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is a major benefit of using gating mechanisms in RNN variants?",
+        "answer_key": "Control information flow to prevent gradient issues",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "Why is sequence length a challenge in RNNs?",
+        "answer_key": "Memory and gradient decay limit context preservation",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What type of activation function is commonly used in RNNs?",
+        "answer_key": "Tanh or ReLU",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What distinguishes sequence-to-sequence modeling from classification tasks?",
+        "answer_key": "Output is also a variable-length sequence",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is the key intuition behind sequence modeling?",
+        "answer_key": "Predict future tokens based on past context",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "How do probabilistic models like HMMs differ from RNNs?",
+        "answer_key": "HMMs use discrete states; RNNs use continuous hidden representations",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "Why are deep RNNs prone to training instability?",
+        "answer_key": "Gradient flow weakens across multiple recurrent layers",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What does 'sequence model vs attention model' comparison highlight?",
+        "answer_key": "Sequential dependency vs direct pairwise dependency computation",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "How can dropout be applied to RNNs?",
+        "answer_key": "Between layers or on non-recurrent connections to reduce overfitting",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is the main role of temporal dependencies in NLP?",
+        "answer_key": "Capture contextual relationships across tokens",
+        "category": "Foundations Of Sequence Modelling"
+    },
+    {
+        "question": "What is the main idea behind Neural Machine Translation (NMT) with attention?",
+        "answer_key": "Enables dynamic alignment between source and target sequences",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What role does the encoder play in an NMT model?",
+        "answer_key": "Encodes source sentence into context-rich representations",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What does the decoder do in NMT with attention?",
+        "answer_key": "Generates target tokens while attending to encoder outputs",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "How does attention improve traditional seq2seq translation models?",
+        "answer_key": "Removes the bottleneck of compressing source info into a single vector",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is pre-attention decoding?",
+        "answer_key": "Applies attention before combining with decoder hidden state",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is post-attention decoding?",
+        "answer_key": "Applies attention after computing the decoder hidden state",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is teacher forcing in RNN training?",
+        "answer_key": "Uses ground-truth tokens instead of predicted ones during training",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "Why is teacher forcing used?",
+        "answer_key": "Speeds up training and stabilizes early learning",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is the main drawback of teacher forcing?",
+        "answer_key": "Causes exposure bias between training and inference",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is exposure bias?",
+        "answer_key": "Model never learns to recover from its own prediction errors",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is scheduled sampling?",
+        "answer_key": "Gradually replaces true tokens with model predictions during training",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is random sampling in decoding?",
+        "answer_key": "Samples next token purely based on probability distribution",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is greedy decoding?",
+        "answer_key": "Always selects token with highest probability at each step",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is a disadvantage of greedy decoding?",
+        "answer_key": "Can produce repetitive or suboptimal sequences",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What does the temperature parameter control in sampling?",
+        "answer_key": "Controls randomness by scaling logits before softmax",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What happens when temperature is low (<1)?",
+        "answer_key": "Distribution sharpens, outputs become more deterministic",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What happens when temperature is high (>1)?",
+        "answer_key": "Distribution flattens, outputs become more diverse",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is beam search?",
+        "answer_key": "Keeps top-k most probable sequences at each decoding step",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What does beam width represent?",
+        "answer_key": "Number of hypotheses retained during decoding",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What problem does beam search aim to solve?",
+        "answer_key": "Balances between exhaustive search and greedy decoding",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What are common problems with beam search?",
+        "answer_key": "Lack of diversity, length bias, and overconfidence",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is length normalization in beam search?",
+        "answer_key": "Adjusts scores to prevent bias toward shorter sequences",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is top-k sampling?",
+        "answer_key": "Samples from the k most probable tokens only",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is top-p (nucleus) sampling?",
+        "answer_key": "Samples from smallest token set whose cumulative probability ≥ p",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "Why is top-p sampling often preferred over top-k?",
+        "answer_key": "Adapts dynamically to probability distribution shape",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is Minimum Bayes Risk (MBR) decoding?",
+        "answer_key": "Selects hypothesis minimizing expected loss under model distribution",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "How does MBR differ from beam search?",
+        "answer_key": "Optimizes for similarity across multiple good hypotheses",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What benefit does MBR decoding provide?",
+        "answer_key": "Improves output robustness and faithfulness",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What are BLEU and ROUGE used for?",
+        "answer_key": "Evaluate quality of generated text against references",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What does BLEU stand for?",
+        "answer_key": "Bilingual Evaluation Understudy",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What does ROUGE stand for?",
+        "answer_key": "Recall-Oriented Understudy for Gisting Evaluation",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What type of metric is BLEU?",
+        "answer_key": "Precision-based n-gram overlap metric",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What type of metric is ROUGE?",
+        "answer_key": "Recall-based n-gram overlap metric",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What does BLEU's brevity penalty prevent?",
+        "answer_key": "Overly short translations from scoring high",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is ROUGE-L?",
+        "answer_key": "Measures longest common subsequence between candidate and reference",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "When is BLEU most commonly used?",
+        "answer_key": "Machine translation evaluation",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "When is ROUGE most commonly used?",
+        "answer_key": "Text summarization evaluation",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is the key difference between BLEU and ROUGE?",
+        "answer_key": "BLEU focuses on precision; ROUGE focuses on recall",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is an n-gram in BLEU and ROUGE scoring?",
+        "answer_key": "A contiguous sequence of n words used for overlap comparison",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "Why might high BLEU not always mean good translation?",
+        "answer_key": "Does not account for semantic correctness or paraphrasing",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is diverse beam search?",
+        "answer_key": "Modifies beam search to encourage output diversity",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is the main trade-off in decoding algorithms?",
+        "answer_key": "Diversity versus accuracy",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "Why are decoding strategies crucial in text generation?",
+        "answer_key": "They determine balance between fluency and variety of output",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What is the purpose of teacher forcing in seq2seq models?",
+        "answer_key": "Aligns predicted tokens closely with target during training",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "Why is training-inference mismatch a concern in seq2seq models?",
+        "answer_key": "Model sees true history during training but predictions during inference",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "How can exposure bias be reduced apart from scheduled sampling?",
+        "answer_key": "Using reinforcement learning or curriculum learning",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What aspect of attention is crucial during decoding in NMT?",
+        "answer_key": "Dynamic alignment of source-target words per time step",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What defines a good decoding algorithm?",
+        "answer_key": "Generates coherent, diverse, and contextually faithful text",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "How is MBR related to human evaluation?",
+        "answer_key": "Better aligns with human-perceived similarity than pure likelihood",
+        "category": "Training And Decoding Techniques"
+    },
+    {
+        "question": "What are the core goals of advanced decoding strategies?",
+        "answer_key": "Enhance diversity, coherence, and human-likeness in generation",
+        "category": "Training And Decoding Techniques"
+    }
+]
