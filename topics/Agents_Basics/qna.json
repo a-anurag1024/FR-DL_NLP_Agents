@@ -1,0 +1,257 @@
+[
+    {
+        "question": "What is the Think–Act–Observe (TAO) cycle in agent systems?",
+        "answer_key": "A loop where an agent thinks, executes an action, and observes feedback.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why is the Think step important in agent reasoning?",
+        "answer_key": "It enables planning, reasoning, and decomposition before acting.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What does the Act phase represent in an AI agent?",
+        "answer_key": "The execution of a tool, function call, or code based on reasoning.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is the Observe step responsible for?",
+        "answer_key": "Collecting feedback from the environment or tool output.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is the ReAct framework?",
+        "answer_key": "A method combining reasoning traces with actions for multi-step tasks.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why is ReAct effective for tool-using agents?",
+        "answer_key": "It structures reasoning and actions into repeatable cycles.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is a JSON agent?",
+        "answer_key": "An agent that outputs structured JSON instructions.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is a function-calling agent?",
+        "answer_key": "An agent that uses LLM APIs to call predefined functions with arguments.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is a code agent?",
+        "answer_key": "An agent that dynamically writes and executes code in a sandbox.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is a key advantage of code agents?",
+        "answer_key": "Highly expressive and capable of solving complex computational tasks.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is an observation in agent workflows?",
+        "answer_key": "Feedback received after executing an action like tool output or errors.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why are observations important?",
+        "answer_key": "They guide adaptation and future actions.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What does strategy adaptation mean for agents?",
+        "answer_key": "Adjusting plans based on new observations or failures.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is Agentic RAG?",
+        "answer_key": "A retrieval system enhanced with multi-step reasoning and planning.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is query reformulation in Agentic RAG?",
+        "answer_key": "Rewriting queries to improve retrieval quality.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is multi-step retrieval?",
+        "answer_key": "Iterative retrieval across sources to refine context.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is source integration in RAG?",
+        "answer_key": "Merging data from vector DBs, APIs, files, and other sources.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is result validation in Agentic RAG?",
+        "answer_key": "Checking consistency and filtering hallucinations.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why use a multi-agent system?",
+        "answer_key": "For specialization, reliability, and scalable parallel workflows.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is a key advantage of multi-agent architecture?",
+        "answer_key": "Reduced hallucinations via cross-verification.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is LlamaIndex?",
+        "answer_key": "A framework for RAG, agents, and tool orchestration.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What are nodes in LlamaIndex?",
+        "answer_key": "Atomic units of text or data stored in an index.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is a query engine in LlamaIndex?",
+        "answer_key": "A module that performs retrieval and response synthesis.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What are tools in LlamaIndex?",
+        "answer_key": "External capabilities like APIs, code execution, or search.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What are function tools in LlamaIndex?",
+        "answer_key": "Tools defined using function-calling schema for LLM invocation.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What are query engine tools in LlamaIndex?",
+        "answer_key": "Retrievers wrapped as tools for multi-source RAG.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What are tool specs in LlamaIndex?",
+        "answer_key": "Structured definitions of tool input and output interfaces.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What are utility tools?",
+        "answer_key": "General-purpose tools like web search, file IO, or calculators.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What does maintaining agent state mean?",
+        "answer_key": "Persisting memory or context across actions and iterations.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why do agents need state?",
+        "answer_key": "To handle multi-step tasks and maintain continuity.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is streaming in agents?",
+        "answer_key": "Outputting intermediate reasoning or partial results in real-time.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Where is human-in-the-loop applied?",
+        "answer_key": "Approval, correction, review, or safety-critical oversight.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is an agentic workflow?",
+        "answer_key": "A structured, deterministic pipeline with guided agent steps.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is an autonomous agent?",
+        "answer_key": "A self-directed agent that decides actions without predefined flow.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is a key difference between workflows and autonomous agents?",
+        "answer_key": "Workflows are deterministic; autonomous agents are adaptive.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is LangGraph used for?",
+        "answer_key": "Building stateful, cycle-capable multi-agent workflows.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why is LangGraph suitable for complex agent pipelines?",
+        "answer_key": "It supports state management, cycles, and multi-agent orchestration.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is agent observability?",
+        "answer_key": "Monitoring agent behavior, metrics, and performance.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why evaluate agent accuracy?",
+        "answer_key": "To verify correctness and reliability.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is problem-solving evaluation?",
+        "answer_key": "Testing the agent's multi-step reasoning capabilities.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is information retrieval quality?",
+        "answer_key": "Measuring the relevance and completeness of retrieved context.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "How is user satisfaction measured?",
+        "answer_key": "Through explicit ratings and feedback signals.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is implicit user feedback?",
+        "answer_key": "Behavioral signals like re-queries, time spent, or corrections.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why measure latency in agents?",
+        "answer_key": "To ensure responsiveness and optimize performance.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is token usage monitoring?",
+        "answer_key": "Tracking input/output tokens to control cost.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why track request errors?",
+        "answer_key": "To identify failing tools, API issues, or agent bugs.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is automated evaluation for agents?",
+        "answer_key": "Using synthetic or rubric-based tests to score performance.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is function calling via fine-tuning?",
+        "answer_key": "Training a model to reliably output structured function calls.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is supervised fine-tuning (SFT) for agents?",
+        "answer_key": "Training on input–output pairs to teach structured behavior.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "What is LoRA fine-tuning?",
+        "answer_key": "A low-rank adaptation method for efficient model tuning.",
+        "category": "Agents Fundamentals"
+    },
+    {
+        "question": "Why use LoRA for tool-calling agents?",
+        "answer_key": "It’s cheap, lightweight, and effective for small datasets.",
+        "category": "Agents Fundamentals"
+    }
+]
