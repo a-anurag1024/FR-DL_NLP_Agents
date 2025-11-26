@@ -1,0 +1,157 @@
+[
+    {
+        "question": "What is the Model Context Protocol (MCP)?",
+        "answer_key": "A standard protocol enabling LLMs to safely interact with external tools and resources.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What problem does MCP solve in terms of integrations?",
+        "answer_key": "Transforms m×n tool–model integrations into m+n standardized connections.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What is the role of a Host in MCP?",
+        "answer_key": "Environment running the model and initiating connections to MCP servers.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What is an MCP Client?",
+        "answer_key": "The component that connects to an MCP server and sends JSON-RPC messages.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What is an MCP Server?",
+        "answer_key": "A system exposing tools, resources, prompts, or sampling capabilities to the model.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What are MCP Tools?",
+        "answer_key": "Function-like operations exposed for model invocation via structured schemas.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What are MCP Resources?",
+        "answer_key": "External entities the model can list, read, or watch, like files or databases.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What are MCP Prompts?",
+        "answer_key": "Server-provided reusable prompt templates or system instructions.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What is Sampling in MCP?",
+        "answer_key": "Capability allowing servers to request model-generated content mid-execution.",
+        "category": "Mcp"
+    },
+    {
+        "question": "Which communication protocol does MCP use?",
+        "answer_key": "JSON-RPC 2.0 for structured bidirectional messaging.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What is an MCP Request message?",
+        "answer_key": "A JSON-RPC call requiring a corresponding response from the server.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What is an MCP Response message?",
+        "answer_key": "A JSON-RPC reply returning result or error for a request.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What is an MCP Notification?",
+        "answer_key": "A message with no expected response, used for streaming events or updates.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What are the main MCP transport mechanisms?",
+        "answer_key": "STDIO and HTTP (with SSE or streamable HTTP).",
+        "category": "Mcp"
+    },
+    {
+        "question": "When is STDIO transport used in MCP?",
+        "answer_key": "For local servers run as subprocesses, especially in desktop hosts.",
+        "category": "Mcp"
+    },
+    {
+        "question": "When is HTTP transport used in MCP?",
+        "answer_key": "For remote, cloud-hosted, or API-based MCP servers.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What are the four stages of the MCP interaction lifecycle?",
+        "answer_key": "Initialization, Discovery, Execution, Termination.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What happens during Initialization in MCP?",
+        "answer_key": "Handshaking and capability exchange between host and server.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What happens during Discovery in MCP?",
+        "answer_key": "The host queries tools, resources, prompts, and server metadata.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What happens during Execution in MCP?",
+        "answer_key": "Model invokes tools, resources, or prompts via requests and receives outputs.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What happens during Termination in MCP?",
+        "answer_key": "Graceful shutdown and cleanup of the server connection.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What SDKs does Anthropic provide for MCP?",
+        "answer_key": "Official TypeScript and Python SDKs for building MCP servers.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What does the TypeScript MCP SDK offer?",
+        "answer_key": "Tooling for tools, resources, prompts, sampling, and streaming capabilities.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What does the Python MCP SDK focus on?",
+        "answer_key": "Simple server creation with tools, resources, and prompts support.",
+        "category": "Mcp"
+    },
+    {
+        "question": "How are MCP clients defined in UI-based hosts?",
+        "answer_key": "Hosts embed client logic to auto-discover and manage MCP servers.",
+        "category": "Mcp"
+    },
+    {
+        "question": "How can Gradio be used as an MCP server?",
+        "answer_key": "By wrapping ML pipelines as MCP tools and exposing endpoints.",
+        "category": "Mcp"
+    },
+    {
+        "question": "How can Gradio act as an MCP client?",
+        "answer_key": "Using smolagents to connect Gradio UIs to external MCP servers.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What is Continue's role in MCP workflows?",
+        "answer_key": "Acts as an MCP host inside IDEs for local developer tooling.",
+        "category": "Mcp"
+    },
+    {
+        "question": "What benefit does MCP bring to local implementations?",
+        "answer_key": "Standardized tool access via local stdio-based servers for privacy and speed.",
+        "category": "Mcp"
+    },
+    {
+        "question": "Why is JSON schema important in MCP tool definitions?",
+        "answer_key": "Ensures structured, validated inputs for safe tool invocation.",
+        "category": "Mcp"
+    },
+    {
+        "question": "How does MCP reduce hallucinations in LLM workflows?",
+        "answer_key": "By exposing real, deterministic capabilities instead of relying on model guesses.",
+        "category": "Mcp"
+    }
+]
