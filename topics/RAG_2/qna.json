@@ -1,0 +1,252 @@
+[
+    {
+        "question": "What is query rewriting in RAG?",
+        "answer_key": "LLM reformulates user query for better retrieval quality.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Why is query rewriting useful?",
+        "answer_key": "Improves recall by clarifying ambiguous queries.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is multi-hop question decomposition?",
+        "answer_key": "Breaking complex queries into simpler sub-questions.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "When is multi-hop decomposition needed?",
+        "answer_key": "For reasoning involving multiple facts or documents.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is HyDE (Hypothetical Document Embedding)?",
+        "answer_key": "Generating a fake passage to embed for improved retrieval.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Why does HyDE improve retrieval?",
+        "answer_key": "Hypothetical answer provides richer semantic signal.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is top-k retrieval?",
+        "answer_key": "Selecting the k most similar documents based on vector score.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is Max Marginal Relevance (MMR)?",
+        "answer_key": "Balances relevance and diversity in retrieved chunks.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Why use MMR?",
+        "answer_key": "Prevents redundant or duplicate retrieved contexts.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is adaptive retrieval?",
+        "answer_key": "Dynamically selecting number of chunks based on query complexity.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is self-query retrieval?",
+        "answer_key": "LLM generates structured filters and embedding queries automatically.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is stuffing in RAG prompting?",
+        "answer_key": "Directly concatenating retrieved chunks into the final prompt.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is map-reduce prompting?",
+        "answer_key": "Parallel chunk processing followed by combined reduction step.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Why use map-reduce prompting?",
+        "answer_key": "Handles large document sets beyond context window.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is a refinement chain?",
+        "answer_key": "Iterative answer improvement across multiple retrieved chunks.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is context-window optimization?",
+        "answer_key": "Reducing prompt size while preserving essential context.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is Self-RAG?",
+        "answer_key": "LLM critiques, filters, and validates retrieved documents itself.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is GraphRAG?",
+        "answer_key": "Retrieval using knowledge graphs instead of raw chunks.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Why use GraphRAG?",
+        "answer_key": "Better for multi-hop reasoning and entity-linked knowledge.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is Agentic RAG?",
+        "answer_key": "LLM acts as planning agent performing iterative retrieval steps.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is multi-document summarization RAG?",
+        "answer_key": "RAG variant that summarizes many documents into a coherent output.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is RAG-Fusion?",
+        "answer_key": "Multi-query retrieval fusion using query variants.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is ColBERT-style retrieval?",
+        "answer_key": "Late interaction retrieval using token-level matching.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What are ranking losses used for?",
+        "answer_key": "Training embeddings to rank relevant docs higher.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is context deduplication?",
+        "answer_key": "Removing repeated or similar chunks to reduce redundancy.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is tokenizer-aware chunking?",
+        "answer_key": "Aligning chunk boundaries with tokenization for semantic coherence.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What are hallucination tests?",
+        "answer_key": "Methods checking if answers introduce unsupported content.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is groundedness scoring?",
+        "answer_key": "Measuring how well the answer is supported by retrieved context.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Why use ROUGE or BLEU in RAG evaluation?",
+        "answer_key": "To compare overlap with reference summaries or answers.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What are factuality checks?",
+        "answer_key": "Tests verifying correctness of entities, facts, and numbers.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is LLM-as-a-judge evaluation?",
+        "answer_key": "Using strong LLMs to rate relevance, groundedness, and correctness.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is the indexing service in a RAG system?",
+        "answer_key": "Service that chunks, embeds, and writes documents to vector DB.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is the document pipeline?",
+        "answer_key": "Full ingestion flow: parsing, cleaning, chunking, embedding, storing.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is the LLM inference gateway?",
+        "answer_key": "Service managing query rewriting, retrieval, and answer synthesis.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What role do rerankers play?",
+        "answer_key": "Reorder retrieved candidates using cross-encoder relevance models.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Why is caching important in RAG?",
+        "answer_key": "Reduces cost and latency for repeated or similar queries.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What should be monitored in production RAG?",
+        "answer_key": "Latency, recall, groundedness, index freshness.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is a latency budget in RAG?",
+        "answer_key": "Target time allocation across retrieval and LLM steps.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Should vector search run on GPU or CPU?",
+        "answer_key": "CPU for HNSW; GPU for IVF-PQ or billion-scale retrieval.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Why shard a vector database?",
+        "answer_key": "To scale storage and search across large corpora.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "Why use streaming over batch pipelines?",
+        "answer_key": "Allows near real-time indexing of new documents.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is retrieval collapse?",
+        "answer_key": "System repeatedly retrieves irrelevant or low-quality chunks.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is embedding drift?",
+        "answer_key": "Embedding versions diverge due to re-training or pipeline changes.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What can cause vector DB corruption?",
+        "answer_key": "Shard failures, incomplete writes, or metadata mismatch.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "What is context overflow?",
+        "answer_key": "Prompt exceeds the LLM token limit causing truncation.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "How to design a RAG-based QA system?",
+        "answer_key": "Ingest pipeline, vector DB, reranker, LLM, caching, monitoring.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "How to design enterprise search for millions of documents?",
+        "answer_key": "Sharded vector DB, hybrid search, reranking, metadata filters.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "How to design multilingual RAG?",
+        "answer_key": "Multilingual embeddings, language routing, cross-language retrieval.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "How to design RAG for legal document analysis?",
+        "answer_key": "Legal embeddings, long-context chunking, citation-based grounding.",
+        "category": "Rag 2"
+    },
+    {
+        "question": "How to prevent hallucinations in RAG?",
+        "answer_key": "Better retrieval, rerankers, grounded prompts, validation layers.",
+        "category": "Rag 2"
+    }
+]

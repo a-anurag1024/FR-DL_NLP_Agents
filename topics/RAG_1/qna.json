@@ -1,0 +1,267 @@
+[
+    {
+        "question": "What is Retrieval-Augmented Generation (RAG)?",
+        "answer_key": "LLM generation enhanced with retrieved external knowledge.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "Why choose RAG over fine-tuning?",
+        "answer_key": "Cheaper and updates knowledge without modifying model weights.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "Why do LLMs hallucinate without retrieval?",
+        "answer_key": "Lack of grounded external context causes confident but wrong answers.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "Why are LLMs' answers often outdated without retrieval?",
+        "answer_key": "Model training data becomes stale over time.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What are the two steps in RAG?",
+        "answer_key": "Retrieve relevant documents → Generate answer using LLM.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What does the indexing pipeline do?",
+        "answer_key": "Preprocesses, chunks, embeds, and stores documents for retrieval.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is query embedding?",
+        "answer_key": "Transforms a query into a vector for semantic similarity search.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is the retriever responsible for?",
+        "answer_key": "Performs ANN search to fetch relevant chunks.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is context formatting in RAG?",
+        "answer_key": "Structuring retrieved text into a usable prompt for LLM.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is the generator in RAG?",
+        "answer_key": "The LLM that produces the final grounded response.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "Dense vs sparse retrieval?",
+        "answer_key": "Dense uses embeddings; sparse relies on text keywords.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is lexical retrieval?",
+        "answer_key": "BM25/TF-IDF keyword-based relevance scoring.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is embedding-based retrieval?",
+        "answer_key": "Semantic similarity search through vector embeddings.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is hybrid retrieval?",
+        "answer_key": "Combining lexical and vector similarity for better relevance.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is an embedding space?",
+        "answer_key": "High-dimensional semantic representation of text meaning.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What are similarity metrics used in vector search?",
+        "answer_key": "Cosine similarity, dot product, Euclidean distance.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is HNSW in ANN search?",
+        "answer_key": "Graph-based high-speed approximate nearest neighbor search.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is IVF indexing?",
+        "answer_key": "Cluster-based ANN approach narrowing search to nearest centroids.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is flat search?",
+        "answer_key": "Exact brute-force similarity search across all vectors.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is product quantization?",
+        "answer_key": "Vector compression technique enabling large-scale search.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is fixed-size chunking?",
+        "answer_key": "Splitting text into uniform token/character ranges.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is a recursive text splitter?",
+        "answer_key": "Chunking by breaking along natural boundaries like paragraphs.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is semantic chunking?",
+        "answer_key": "Chunking guided by meaning using embeddings or LLMs.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is the sliding window chunking method?",
+        "answer_key": "Overlapping windows across text to maintain context continuity.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is the purpose of overlap in chunking?",
+        "answer_key": "Preserves context across chunk boundaries.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "Why is deduplication important?",
+        "answer_key": "Prevents redundant chunks and improves retrieval quality.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is boilerplate removal?",
+        "answer_key": "Eliminating repeated headers, footers, or navigation text.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is special about table and code chunking?",
+        "answer_key": "Requires structural preservation to avoid semantic breakage.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "Why store metadata like titles, authors, timestamps?",
+        "answer_key": "Improves filtering, ranking, and contextual relevance.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What metadata is useful for reranking?",
+        "answer_key": "Tags, BM25 scores, section headers, timestamps.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What are OpenAI text-embedding-3 models known for?",
+        "answer_key": "High-quality, general-purpose semantic embeddings.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What are BGE embedding models?",
+        "answer_key": "Strong open-source embeddings optimized for retrieval tasks.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is special about E5 embeddings?",
+        "answer_key": "Instruction-style query/passages designed for retrieval alignment.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What are Instructor models?",
+        "answer_key": "Instruction-conditioned embeddings for task-specific semantics.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "Why use domain-specific embeddings?",
+        "answer_key": "Better handling of legal, finance, or medical terminology.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "When should you fine-tune embeddings?",
+        "answer_key": "When domain vocabulary or retrieval task is specialized.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is the MTEB benchmark?",
+        "answer_key": "Large-scale benchmark evaluating text embeddings across tasks.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is Precision@k?",
+        "answer_key": "Proportion of relevant results among top-k retrieved documents.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is Recall@k?",
+        "answer_key": "Fraction of relevant documents successfully retrieved in top-k.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is MRR?",
+        "answer_key": "Measures rank position of the first relevant result.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is Pinecone used for?",
+        "answer_key": "Managed vector database optimized for fast ANN search.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is Weaviate?",
+        "answer_key": "Open-source vector DB with hybrid search and GraphQL API.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is Milvus?",
+        "answer_key": "Scalable open-source vector database for billion-scale search.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is FAISS?",
+        "answer_key": "Library for high-speed ANN search, often GPU-accelerated.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is Chroma?",
+        "answer_key": "Lightweight, open-source vector store for prototyping.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is Elasticsearch + KNN plugin?",
+        "answer_key": "Hybrid lexical + vector search extension for Elasticsearch.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What determines index build time?",
+        "answer_key": "Corpus size, embedding model speed, and index type.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What affects vector search complexity?",
+        "answer_key": "Index structure (HNSW/IVF) and vector dimensionality.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What drives vector DB memory requirements?",
+        "answer_key": "Embedding size, index type, and metadata volume.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is hybrid retrieval?",
+        "answer_key": "Combining BM25 lexical and embedding-based vector search.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What filtering strategies improve retrieval?",
+        "answer_key": "Metadata filters based on date, topic, or document type.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is cross-encoder reranking?",
+        "answer_key": "Re-evaluating candidate documents using a query-document encoder.",
+        "category": "Rag 1"
+    },
+    {
+        "question": "What is a multi-stage retrieval pipeline?",
+        "answer_key": "Fast ANN retrieval → filtering → reranking → final selection.",
+        "category": "Rag 1"
+    }
+]

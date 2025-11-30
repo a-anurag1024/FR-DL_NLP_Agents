@@ -52,4 +52,6 @@ def merge_qna_jsons(folder_path, output_path="merged_qna.json"):
 #merge_qna_jsons("subtopic_qnas/NLP_1", "topics/NLP_1/qna.json")
 #merge_qna_jsons("subtopic_qnas/NLP_2", "topics/NLP_2/qna.json")
 #merge_qna_jsons("subtopic_qnas/Agents_Basics", "topics/Agents_Basics/qna.json")
-merge_qna_jsons("subtopic_qnas/MCP", "topics/MCP/qna.json")
+#merge_qna_jsons("subtopic_qnas/MCP", "topics/MCP/qna.json")
+merge_qna_jsons("subtopic_qnas/RAG_1", "topics/RAG_1/qna.json")
+merge_qna_jsons("subtopic_qnas/RAG_2", "topics/RAG_2/qna.json")
